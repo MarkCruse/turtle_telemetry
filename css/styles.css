@@ -1,35 +1,116 @@
 /* custom CSS rules */
+
 body {
-    font-family: "Work Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    background: whitesmoke;
+    font-family: Montserrat, sans-serif;
+    border: 1px;
 }
 
-.legend-large, .legend-small {
-    border-radius: 50%;
+b {
+    font-weight: bold;
 }
-hr.small, hr.large {
-    width: 83px;
+
+h1, h2, h3, p {
     position: absolute;
-    top: -8px;
-    left: 55px;
-    border: 1px solid #ccc;     /* overwrite assembly.css rule */
-    margin-top: 8px;            /* overwrite assembly.css rule */
-}
-ul{
-    list-style: disc outside none;
-    padding: 10px 10px 10px 25px;
-}
-.common_name {
-    color: #6E77B0;
+    left: 20px;
+    top: 10px;
+    font-size: 2em;
+    font-weight: 100;
+    color: #662002;
 }
 
-.species{
-    color: #D96D02;
+p {
+    top: 750px;
+    left: 60px;
+    font-size: .9em;
+    font-weight: 80;
+    color: #662002;
 }
 
-boys {
-    color: #6E77B0;
-    text: bold;
+h2 {
+    top: 100px;
+    left: 30px;
+    font-size: 1.2em;
 }
-girls {
-    color: #D96D02;
+
+h3 {
+    top: 140px;
+    left: 30px;
+    font-size: 0.85em;
 }
+
+#map {
+    width: 900px;
+    height: 600px;
+    margin-top: 90px;
+    margin-left: 200px;
+    /*margin-bottom: 5px auto;*/
+    border: 1px solid #d3d3d3;
+}
+
+.point-turtle {
+     fill: blue;
+     /*stroke: white;*/
+     opacity: .7;
+}
+
+.topology {
+     stroke: #fff;
+     fill: gray;
+}
+
+.hover {
+    fill: yellow;
+}
+
+.legend {
+    font-size: 11px;
+}
+
+.footer {
+  position: bottom;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: absolute;
+    height: 15px;
+    padding: 2px;
+    font-size: 12px;
+    background: #FFFFE0;
+    border: 1px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+#year-value {
+     width: 200px;
+     margin-left: 200px;
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+.slider {
+     width: 200px;
+     margin-top: 10px;
+     margin-left: 200px;
+     margin-bottom: 5px;
+     border: 1px, solid #d3d3d3;
+}
+
+/*path {
+    stroke: white;
+    stroke-width: 0.5px;
+    fill: gray;
+}*/
+/*svg {
+  background: lightBlue;
+}*/

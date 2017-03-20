@@ -2,93 +2,118 @@
 <html>
 
 <head>
-    <meta charset=utf-8 />
-    <title>Mapbox test for Turtle Telemetry</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta charset="utf-8">
+    <title>Turtle Tracking</title>
+    <link rel="stylesheet" href="css/styles.css">
 
-    <link href='https://api.mapbox.com/mapbox-assembly/v0.8.0/assembly.min.css' rel='stylesheet'>
-    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-    <link href='css/styles.css' rel='stylesheet' />
 </head>
 
 <body>
+    <div id="map"></div>
+    <h1>Turtle Tracking 1997-2017</h1>
+    <h2></h2>
+    <h3></h3>
+    <input type="range" class="slider">
+    <div id="year-value"></div>
+    <div class="footer"><b>About:</b>&nbsp;&nbsp;</b> <br/>
+       <b>Data source:&nbsp;&nbsp;</b><a href="http://seamap.env.duke.edu/swot' target="_blank"">The State of the World's Sea Turtles</a>
+       <br/>
+       <b>Map designed by:</b>&nbsp;&nbsp;Mark Cruse - March 2017
+ </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script>
 
-    <div class='grid'>
-        <div class='col col--12 col--3-ml p12 pb6 viewport-third viewport-full-ml'>
-            <div class='h-full scroll-auto'>
-                <h1 class='txt-headline mb6'>Mapbox test for Turtles</h1>
-                <p>Using MAP 673 lesson to adapt to Turtle Telemetry project. Using this as a starter to test loading the csv data.</p>
-                <p><br />Current data is a subset of the initial 80,000 record download. Current data contains:
-                    <ul>
-                        <li>Date range: 2012-2017</li>
-                        <li>13 datasets</li>
-                        <li>12 providers</li>
-                        <li>5 species of turtles</li>
-                        <li>12,454 records</li>
-                    </ul>
+    <script type="text/javascript">
+        var width = 900,
+            height = 600;
 
-                </p>
-                <h2 class='txt-xl mt18 mb12'></h2>
-                <p></p>
-                <footer class='mt240 bg-gray-faint txt-s'>
-                    <p>Data source: <a class='link' href='http://seamap.env.duke.edu/swot' target="_blank">The State of the World's Sea Turtles</a></p>
-                    <p>Map authored by <a class='link' href='#'>Mark Cruse 3/18/2017</a></p>
-                </footer>
-            </div>
-        </div>
-        <div class='col col--12 col--9-ml h180 h-full-ml'>
-            <div id="map" class='viewport-twothirds viewport-full-ml'></div>
+        var svg = d3.select("#map") // put svg in the map div element
+            .append("svg") // create and append a new svg element to it
+            .attr("width", width) // give the svg width
+            .attr("height", height); // give the svg height
 
-            <!-- slider label -->
-            <div id='label' class='range w120 bg-white round-mm ml72 border border--gray-light shadow-darken25 p12'>
-                <div class="slide-label txt-m absolute"></div>
-            </div>
+        var projection = d3.geo.mercator()
+            // .scale(1200)                        // play with the scale until it's 'zoomed' about right
+            .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+        var geoPath = d3.geo.path() //  create a new geo path generator
+            .projection(projection); // assign the project we just created to it
 
-            <!-- ui slider -->
-            <div id='slider' class='range w240 bg-white round-ml border border--gray-light shadow-darken25 p18'>
-                <input type='range' min="2012" , max="2017" , value="1" , step="1" class="slider" />
-
-            </div>
+        queue()
+            .defer(d3.json, "data/world-110m2.json")
+            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
+            .await(makeMap); //sends error and the next item in function
 
 
-                        <!-- legend -->
-                        <div id='legend' class="absolute bg-darken10 bottom">
-                        <!--'range w240 bg-white round-ml border border--gray-light shadow-darken25 p18'>
-
-                            <h1 class='txt-bold mb12 w-full mx-auto'>Text here for legend</h1>
-                            <!--
-                            <div class='legend-circles relative w180 wmax180'>
-                            <div class="legend-large border border--gray-light absolute"></div>
-                            <div class="legend-small border border--gray-light absolute"></div>
-                            <div class="legend-large-label txt-m absolute"></div>
-                            <div class="legend-small-label txt-m absolute"></div>
+        function makeMap(error, topology, year) {
+            var data = [];
+            year.forEach(function(year) {
+                data.push(year.year); //load year to array
+            });
+            // get the start year and end year range
+            var min = Math.min.apply(Math, data),  //get the min year
+               max =  Math.max.apply(Math, data); //get the max year
 
 
-                            <!-- end legend div -->
 
-                    </div>
+               // load the topology features from either json or topoJSON data and append to map
+               svg.append("g") // create and append a new SVG 'g' element to the svg
+                   .selectAll("path")
+                   .data(topojson.feature(topology, topology.objects.countries).features)
+                   .enter()
+                   .append("path")
+                   .attr("d", geoPath)
+                   .attr("class", "topology");
 
-        </div>
+            var track = svg.append("g") //begin plotting points to map
+                .selectAll("circle")
+                .data(year)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d) {
+                    d.position = projection([d.lon, d.lat])
+                    if (d.position) {
+                        return d.position[0];
+                    }
+                })
+                .attr("cy", function(d) {
+                    if (d.position) {
+                        return d.position[1];
+                    }
+                })
+                .attr("r", function(d) {
+                    return 1
+                })
+                .attr("class", "point-turtle");
+                //end plotting points to map
 
-    </div>
+          var output = d3.select("#year-value").text(min+"-"+max);
 
-    <div id='info' class='py6 px12 bg-white border border--gray-light round absolute wmax200 none'>
-        <!-- positions info box at cursor -->
-        <!--<p><b>Species: <span></span></b></p>-->
-        <p class='species'>Species: <span></span> <span class='txt-l txt-bold'></span></p>
-        <p class='common_name'>Common name: <span></span> <span class='txt-l txt-bold'></span></p>
-        <p class='year'>Year: <span></span> <span class='txt-l txt-bold'></span></p>
-        <hr class='txt-hr'>
-    </div>
+          d3.select(".slider")
+               .attr("min", min)
+               .attr("max", max)
+               .attr("value", max)
+               .attr("step", 1)
+               .on("input", function() {
+                    update(this.value);
+               });
 
-    <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.8.0/assembly.js"></script>
-    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
-    <script src='js/app.js'></script>
 
+          function update(val){
+               output.text(Number(val));
+               track.attr("display", function(d) {
+                    if(val == 2017){
+                         var output = d3.select("#year-value").text(min+"-"+max);
+                         return "all";
+                    } else if(val != d.year){
+                         return "none";
+                    }
+               })
+          }
+
+        }; // end makeMap function
+    </script>
 </body>
 
 </html>
