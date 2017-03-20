@@ -29,6 +29,10 @@
         var width = 900,
             height = 600;
 
+              var div = d3.select("body").append("div")
+                  .attr("class", "tooltip")
+                  .style("opacity", 0);
+
         var svg = d3.select("#map") // put svg in the map div element
             .append("svg") // create and append a new svg element to it
             .attr("width", width) // give the svg width
@@ -83,10 +87,36 @@
                     }
                 })
                 .attr("r", function(d) {
-                    return 1
+                    return 3
                 })
-                .attr("class", "point-turtle");
+                .attr("class", "point-turtle")
                 //end plotting points to map
+
+                                   .on("mouseover", function(d){   // listener for objects
+                                       d3.select(this).transition().duration(300).style("opacity", 1);
+                                       // tooltip starts here
+                                       div.transition().duration(300)
+                                           .style("opacity", 1)
+                                           div.text(d.common_name + '  ' + d.date+'')
+                                           .style("left", (d3.event.pageX) + "px")
+                                           .style("top", (d3.event.pageY - 30) + "px");
+                                           //tooltip ends
+                                           d3.select("h2").text(d.common_name + ' ');  //insert the name of the turtle hovered over into the h2 element
+                                           d3.select("h3").text(d.date + ' ');  //insert the date of point hovered over into the h3 element
+                                           d3.select(this).attr("class","hover"); //apply CSS class rules
+                                       })
+                                       .on("mouseout", function(d){
+                                           d3.select(this)
+                                               .transition().duration(300)
+                                               .style("opacity", 0.8);
+                                           div.transition().duration(300)
+                                               .style("opacity", 0);
+                                               d3.select("h2").text("");
+                                               d3.select(this).attr("class", "point-turtle");
+                                               d3.select("h3").text("");
+                                               d3.select(this).attr("class", "point-turtle");
+                                       });
+
 
           var output = d3.select("#year-value").text(min+"-"+max);
 
