@@ -50,12 +50,6 @@ h3 {
     border: 1px solid #d3d3d3;
 }
 
-.point-turtle {
-     fill: blue;
-     /*stroke: white;*/
-     opacity: .7;
-}
-
 .topology {
      stroke: #fff;
      fill: gray;
@@ -67,6 +61,12 @@ h3 {
 
 .legend {
     font-size: 11px;
+}
+
+.point-turtle {
+     fill: blue;
+     /*stroke: white;*/
+     opacity: .7;
 }
 
 .footer {
