@@ -15,34 +15,57 @@
     <h3></h3>
     <input type="range" class="slider">
     <div id="year-value"></div>
-    <div class="footer"><b>About:</b>&nbsp;&nbsp;</b> <br/>
-        <b>Data source:&nbsp;&nbsp;</b><a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
+    <div class="footer"><b><!--About:-->Last update: </b>3-21-2017 13:30&nbsp;&nbsp;</b> <br/>
+        <b>Data source:&nbsp;&nbsp;</b><a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the topology's Sea Turtles</a>
         <br/>
         <b>Map designed by:</b>&nbsp;&nbsp;Mark Cruse - March 2017
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script> -->
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
 
     <script type="text/javascript">
-        var width = 900,
-            height = 600;
-
         var div = d3.select("body").append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
 
+        var width = 900,
+            height = 600,
+            scale0 = (width - 1) / 2 / Math.PI;
+
+        var projection = d3.geo.mercator()
+        // // .scale(1200)                        // play with the scale until it's 'zoomed' about right
+        // .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+
+        var zoom = d3.behavior.zoom()
+            .translate([width / 2, height / 2])
+            .scale(scale0)
+            .scaleExtent([scale0, 8 * scale0])
+            .on("zoom", zoomed);
+
+        var geoPath = d3.geo.path() //  create a new geo path generator
+            .projection(projection); // assign the project we just created to it
+
         var svg = d3.select("#map") // put svg in the map div element
             .append("svg") // create and append a new svg element to it
             .attr("width", width) // give the svg width
-            .attr("height", height); // give the svg height
+            .attr("height", height) //; give the svg height
+            .append("g");
 
-        var projection = d3.geo.mercator()
-            // .scale(1200)                        // play with the scale until it's 'zoomed' about right
-            .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
-        var geoPath = d3.geo.path() //  create a new geo path generator
-            .projection(projection); // assign the project we just created to it
+
+        var g = svg.append("g");
+
+        svg.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height);
+
+        svg
+            .call(zoom)
+            .call(zoom.event);
 
         queue()
             .defer(d3.json, "data/world-110m2.json")
@@ -59,17 +82,38 @@
             var min = Math.min.apply(Math, data), //get the min year
                 max = Math.max.apply(Math, data); //get the max year
 
-
-
             // load the topology features from either json or topoJSON data and append to map
-            svg.append("g") // create and append a new SVG 'g' element to the svg
-                .selectAll("path")
-                .data(topojson.feature(topology, topology.objects.countries).features)
-                .enter()
-                .append("path")
-                .attr("d", geoPath)
-                .attr("class", "topology");
 
+            //svg.append("g") // create and append a new SVG 'g' element to the svg
+            //     .selectAll("path")
+            //     .data(topojson.feature(topology, topology.objects.countries).features)
+            //     .enter()
+            //     .append("path")
+            //     .attr("d", geoPath)
+            //     .attr("class", "topology")
+            //
+
+            g.append("path")
+                .datum({
+                    type: "Sphere"
+                })
+                .attr("class", "sphere")
+                .attr("d", geoPath);
+
+            g.append("path")
+                .datum(topojson.merge(topology, topology.objects.countries.geometries))
+                .attr("class", "land")
+                .attr("d", geoPath);
+
+            g.append("path")
+                .datum(topojson.mesh(topology, topology.objects.countries, function(a, b) {
+                    return a !== b;
+                }))
+                .attr("class", "boundary")
+                .attr("d", geoPath);
+
+
+            //   var track = svg.append("g") //begin plotting points to map
             var track = svg.append("g") //begin plotting points to map
                 .selectAll("circle")
                 .data(year)
@@ -102,7 +146,7 @@
                         .style("top", (d3.event.pageY - 30) + "px");
                     //tooltip ends
                     d3.select("h2").text(d.common_name + ' '); //insert the name of the turtle hovered over into the h2 element
-                    d3.select("h3").text(d.date + ' '+d.provider_name); //insert the date of point hovered over into the h3 element
+                    d3.select("h3").text(d.date + ' ' + d.provider_name); //insert the date of point hovered over into the h3 element
                     d3.select(this).attr("class", "hover"); //apply CSS class rules
                 })
                 .on("mouseout", function(d) {
@@ -117,7 +161,6 @@
                     d3.select(this).attr("class", "point-turtle");
                 });
 
-
             var output = d3.select("#year-value").text(min + "-" + max);
 
             d3.select(".slider")
@@ -129,7 +172,6 @@
                     update(this.value);
                 });
 
-
             function update(val) {
                 output.text(Number(val));
                 track.attr("display", function(d) {
@@ -140,9 +182,21 @@
                         return "none";
                     }
                 })
-            }
+            } //end function update
+
 
         }; // end makeMap function
+
+        function zoomed() {
+            projection
+                .translate(zoom.translate())
+                .scale(zoom.scale());
+
+            g.selectAll("path")
+                .attr("d", geoPath);
+        }
+
+        d3.select(self.frameElement).style("height", height + "px");
     </script>
 </body>
 

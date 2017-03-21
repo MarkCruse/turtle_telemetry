@@ -114,3 +114,28 @@ div.tooltip {
 /*svg {
   background: lightBlue;
 }*/
+svg {
+    background: #eee;
+}
+
+.sphere {
+    fill: #fff;
+}
+
+.land {
+     /*fill: #000;*/
+     fill: gray;
+}
+
+.boundary {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
