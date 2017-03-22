@@ -23,6 +23,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script> -->
+    <!-- only needed for jenks et al -->
+
 
     <script type="text/javascript">
         var div = d3.select("body").append("div")
@@ -67,20 +70,34 @@
                 .attr("d", geoPath)
                 .attr("class", "topology");
 
-            var data = [],  //array to hold years
+            var dataYr = [], //array to hold years
+                dataName = [],
                 datum;
 
             year.forEach(function(year) {
-                data.push(year.year); //load year to array
+                dataYr.push(year.year); //load year to array
+                dataName.push(year.common_name);
             });
 
+            function onlyUnique(value, index, self) {
+                return self.indexOf(value) === index;
+            }
+            var unique = dataName.filter(onlyUnique);
+
+            var colors = ["#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"];
+            var legend_labels = [unique[0], unique[1], unique[2], unique[3], unique[4]];
+            var jenks = d3.scale.threshold()
+                .domain(unique)
+                .range(colors);
+
             // get the start year and end year range
-            var min = Math.min.apply(Math, data), //get the min year
-                max = Math.max.apply(Math, data); //get the max year
+            var min = Math.min.apply(Math, dataYr), //get the min year
+                max = Math.max.apply(Math, dataYr); //get the max year
 
             radius = d3.scale.sqrt()
                 .domain([min, max])
                 .range([2, 30]);
+
 
             var track = g.selectAll("circle")
                 .data(year)
@@ -165,6 +182,38 @@
                 });
 
             svg.call(zoom);
+
+            // ************* Begin Legend *************
+            var legend = svg.selectAll("g.legend")
+                .data(unique)
+                .enter().append("g")
+                .attr("class", "legend");
+
+            var ls_w = 20, //width of legend
+                ls_h = 15; //height of legend
+
+            legend.append("rect")
+                .attr("x", width - 110) //location of legend on map
+                .attr("y", function(d, i) {
+                    return height - (i * ls_h) - 2 * ls_h;
+                })
+                .attr("width", ls_w)
+                .attr("height", ls_h)
+                .style("fill", function(d, i) {
+                    return jenks(d);
+                })
+                .style("opacity", 0.8);
+
+
+            legend.append("text")
+                .attr("x", width - 80) //location of legend text on map
+                .attr("y", function(d, i) {
+                    return height - (i * ls_h) - ls_h - 4;
+                })
+                .text(function(d, i) {
+                    return legend_labels[i];
+                });
+            // ************* End Legend *************
 
         };
     </script>
