@@ -53,6 +53,7 @@ h3 {
 .topology {
      stroke: #fff;
      fill: #e5e5e5;
+     opacity: .7;
 }
 
 .hover {
@@ -111,9 +112,9 @@ div.tooltip {
     stroke-width: 0.5px;
     fill: gray;
 }*/
-/*svg {
-  background: lightBlue;
-}*/
+svg {
+  background: #bbd0f7;
+}
 
 /*.sphere {
     fill: #fff;

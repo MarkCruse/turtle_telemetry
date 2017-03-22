@@ -79,15 +79,17 @@
                 dataName.push(year.common_name);
             });
 
-            function onlyUnique(value, index, self) {
+            function onlyUnique(value, index, self) {  //find only the unique values
                 return self.indexOf(value) === index;
             }
-            var unique = dataName.filter(onlyUnique);
+            var unique = dataName.filter(onlyUnique); //contains no dups(unique)
+            unique.sort();  //sort the unique name to alphabetise
 
-            var colors = ["#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"];
-            var legend_labels = [unique[0], unique[1], unique[2], unique[3], unique[4]];
-            var jenks = d3.scale.threshold()
-                .domain(unique)
+            var colors = ["coral", "yellow", "red", "green", "purple","darkcyan"];
+            var legend_labels = [unique[5], unique[4], unique[3], unique[2], unique[1], unique[0]];
+
+            var turtle_name = d3.scale.category20()
+               //  .domain(legend_labels)
                 .range(colors);
 
             // get the start year and end year range
@@ -192,18 +194,17 @@
             var ls_w = 20, //width of legend
                 ls_h = 15; //height of legend
 
-            legend.append("rect")
-                .attr("x", width - 110) //location of legend on map
-                .attr("y", function(d, i) {
-                    return height - (i * ls_h) - 2 * ls_h;
-                })
-                .attr("width", ls_w)
-                .attr("height", ls_h)
-                .style("fill", function(d, i) {
-                    return jenks(d);
-                })
-                .style("opacity", 0.8);
-
+          legend.append("rect")
+              .attr("x", width - 110) //location of legend on map
+              .attr("y", function(d, i) {
+                  return height - (i * ls_h) - 2 * ls_h;
+              })
+              .attr("width", ls_w)
+              .attr("height", ls_h)
+              .style("fill", function(d, i) {
+                  return turtle_name(d);
+              })
+              .style("opacity", 0.8);
 
             legend.append("text")
                 .attr("x", width - 80) //location of legend text on map
