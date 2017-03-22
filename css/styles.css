@@ -63,6 +63,9 @@ h3 {
 .legend {
     font-size: 11px;
 }
+rect {
+     stroke-width: 2;
+}
 
 .point-turtle {
      fill: blue;
