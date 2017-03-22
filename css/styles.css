@@ -42,8 +42,8 @@ h3 {
 }
 
 #map {
-    width: 900px;
-    height: 600px;
+    width: 960px;
+    height: 580px;
     margin-top: 90px;
     margin-left: 200px;
     /*margin-bottom: 5px auto;*/
@@ -114,18 +114,14 @@ div.tooltip {
 /*svg {
   background: lightBlue;
 }*/
-svg {
-    background: #eee;
-}
 
-.sphere {
+/*.sphere {
     fill: #fff;
 }
 
 .land {
-     /*fill: #000;*/
      fill: gray;
-}
+}*/
 
 .boundary {
     fill: none;
