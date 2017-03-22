@@ -63,15 +63,16 @@ h3 {
 .legend {
     font-size: 11px;
 }
+
 rect {
      stroke-width: 2;
 }
 
-.point-turtle {
-     fill: blue;
+/*.point-turtle {
+     fill: blue;*/
      /*stroke: white;*/
-     opacity: .7;
-}
+     /*opacity: .7;
+}*/
 
 .footer {
   position: bottom;
