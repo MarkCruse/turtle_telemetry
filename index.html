@@ -9,14 +9,13 @@
 </head>
 
 <body>
-     <div id="document" style="width: 960px;>"
-     <div id="Title">
-     <h1>Tracking Turtles</h1>
-     <div id="input">
-     <label id="proSelText">Filter data by provider: </label>
-     <span id="providerSelect" style="display: inline;">
-     <select id="providerSelect" style="display: inline;">
-     <option class="default" value="00">Select a Data Provider</option>
+    <div id="document" style="width: 960px;>" <div id="Title">
+        <h1>Tracking Turtles</h1>
+        <div id="input">
+            <label id="proSelText">Filter data by provider: </label>
+            <span id="providerSelect" style="display: inline;">
+     <select id="providerSelector" style="display: inline;">
+     <option class="default" value="00">Select a Data Provider
      <option value="01">Acuario de Veracruz, A.C.</option>
      <option value="02">Jake Levenson</option>
      <option value="03">James Cook University and Torres Strait Ranger Groups</option>
@@ -28,22 +27,23 @@
      <option value="09">Virginia Aquarium Stranding Response Program</option>
      </select>
      </span>
-     <button id="unSelect" style="display: inline;">Un-Select</button>
-     </div>
-     <div id="map"></div>
-     <!-- <h1>Turtle Tracking 1997-2017</h1>
+            <button id="Select" style="display: inline;">Select</button>
+        </div>
+        <div id="map"></div>
+        <!-- <h1>Turtle Tracking 1997-2017</h1>
      <h2></h2>
      <h3></h3> -->
-     <input type="range" class="slider">
-     <div id="year-value"></div>
-     <div class="footer">
-          <!--About:-->
-         Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
-         <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
+        <input type="range" class="slider">
+        <!-- the value of the slider = year-value -->
+        <div id="year-value"></div>
+        <div class="footer">
+            <!--About:-->
+            Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
+            <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
          <br/>Last update: 3-23-2017 1500</sub>
-     </div>
-     </div>
-</div>
+        </div>
+    </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -52,13 +52,42 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script> -->
     <!-- only needed for jenks et al -->
 
-</div>
+    </div>
     <script type="text/javascript">
-        var div = d3.select("body").append("div")
+        var selectorOptions = ["Select a data provider", "Acuario de Veracruz, A.C.", "Jake Levenson", "James Cook University and Torres Strait Ranger Groups", "Arizona", "Mackay & District Turtle Watch Association", "Marine Research Foundation",
+            "Sea Turtles and Marine Mammal Conservation Program (ProCTMM)", "Virginia Aquarium and Marine Science Center", "Virginia Aquarium Stranding Response Program"
+        ];
+
+        var div = d3.select("body")
+            .append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        var width = 960,
+        var selector = d3.select("div")
+            .append("selector")
+            .attr("class", "selector")
+            .on("change", onchange)
+
+        // var x = document.getElementById("providerSelector");
+        // var value = x.options[x.selectedIndex].value;
+        // var text = x.options[x.selectedIndex].text;
+        // console.log(value);
+        var options = selector
+            .selectAll('option')
+            .data(selectorOptions).enter()
+            .append('option')
+            .text(function(d) {
+                return d;
+            });
+
+        function onchange() {
+            selectValue = d3.select('select').property('value')
+            d3.select('body')
+                .append('p')
+                .text(selectValue + ' is the last selected option.')
+        };
+
+        var width = 920,
             height = 580;
 
         const zoom = d3.zoom()
@@ -76,7 +105,7 @@
             .scale(150) // scale for Pacific
             .rotate([-180, 0]); //rotation for Pacific
 
-     //    .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+        //    .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
 
         var geoPath = d3.geoPath()
             .projection(projection);
@@ -90,12 +119,12 @@
         var g = svg.append("g");
 
         queue()
-        .defer(d3.json, "data/world-110m2.json")
-        .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
+            .defer(d3.json, "data/world-110m2.json")
+            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
             .await(makeMap); //sends error and the next item in function
 
 
-        function makeMap(error, topology, year) {
+        function makeMap(error, topology, csvData) {
 
             g.append("path")
                 .datum(topojson.feature(topology, topology.objects.countries))
@@ -106,9 +135,9 @@
                 dataName = [],
                 datum;
 
-            year.forEach(function(year) {
-                dataYr.push(year.year); //load year to array
-                dataName.push(year.common_name);
+            csvData.forEach(function(csvData) {
+                dataYr.push(csvData.year); //load year to array
+                dataName.push(csvData.common_name);
             });
 
             function onlyUnique(value, index, self) { //find only the unique values
@@ -136,10 +165,10 @@
 
 
             var track = g.selectAll("circle")
-                .data(year)
+                .data(csvData)
                 .enter()
                 .append("circle")
-                .attr("r", 1)
+                .attr("r", 1) // hardcoded radius
 
                 .attr("fill", function(d) {
                     for (i = 0; i <= unique.length; i++) {
