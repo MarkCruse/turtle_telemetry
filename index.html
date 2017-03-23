@@ -65,8 +65,10 @@
         var g = svg.append("g");
 
         queue()
-            .defer(d3.json, "data/world-110m2.json")
-            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
+     //    .defer(d3.json, "data/world-110m2.json")
+     //    .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
+        .defer(d3.json, "world-110m2.json")
+        .defer(d3.csv, "obis_seamap_20170305_200629_custom_1997-2017.csv")
             .await(makeMap); //sends error and the next item in function
 
 
