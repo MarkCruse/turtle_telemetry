@@ -1,5 +1,22 @@
 /* custom CSS rules */
 
+
+#document {
+  margin: 0 auto;
+      font-family: Montserrat, sans-serif;
+}
+#mapTitle {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 100%;
+}
+#model {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+b {
+    font-weight: bold;
+}
 body {
     padding: 0;
     margin: 0;
@@ -8,22 +25,16 @@ body {
     border: 1px;
 }
 
-b {
-    font-weight: bold;
-}
-
-h1, h2, h3, p {
-    position: absolute;
-    left: 20px;
-    top: 10px;
+h1, h2, h3{
+    /*position: absolute;*/
     font-size: 2em;
     font-weight: 100;
     color: #662002;
 }
 
 p {
-    top: 750px;
-    left: 60px;
+    /*top: 750px;
+    left: 60px;*/
     font-size: .9em;
     font-weight: 80;
     color: #662002;
@@ -44,8 +55,8 @@ h3 {
 #map {
     width: 960px;
     height: 580px;
-    margin-top: 90px;
-    margin-left: 200px;
+    margin-top: 10px;
+    margin-left: 1px;
     /*margin-bottom: 5px auto;*/
     border: 1px solid #d3d3d3;
 }
@@ -139,4 +150,21 @@ svg {
 .overlay {
     fill: none;
     pointer-events: all;
+}
+select {
+  border: 1px solid #D3D3D3;
+  color: #555555;
+  font-weight: normal;
+  white-space: nowrap;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0.25em;
+  font-size: 14px;
+}
+select:disabled, option:disabled, li.disabled {
+  background: silver;
+  background-color: silver !important;
+  font-style: italic;
+  pointer-events: none;
+  color: gray !important;
 }

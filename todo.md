@@ -7,7 +7,7 @@
 - [ ] size points w/zoom  
 - [ ] stroke lines are a bit large on zoom
 - [x] repair tooltip - it's broken
-- [ ] post live on github.io
+- [x] post live on github.io
 - [x] error when map is clicked - why?
 - [ ] radio button filtering on?
 - [ ] dropdown selector or list selector

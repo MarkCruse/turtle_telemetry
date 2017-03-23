@@ -9,17 +9,42 @@
 </head>
 
 <body>
-    <div id="map"></div>
-    <h1>Turtle Tracking 1997-2017</h1>
-    <h2></h2>
-    <h3></h3>
-    <input type="range" class="slider">
-    <div id="year-value"></div>
-    <div class="footer"><b><!--About:-->Last update: </b>3-22-2017 1630&nbsp;&nbsp;</b> <br/>
-        <b>Data source:&nbsp;&nbsp;</b><a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
-        <br/>
-        <b>Map designed by:</b>&nbsp;&nbsp;Mark Cruse - March 2017
-    </div>
+     <div id="document" style="width: 960px;>"
+     <div id="Title">
+     <h1>Tracking Turtles</h1>
+     <div id="input">
+     <label id="proSelText">Filter data by provider: </label>
+     <span id="providerSelect" style="display: inline;">
+     <select id="providerSelect" style="display: inline;">
+     <option class="default" value="00">Select a Data Provider</option>
+     <option value="01">Acuario de Veracruz, A.C.</option>
+     <option value="02">Jake Levenson</option>
+     <option value="03">James Cook University and Torres Strait Ranger Groups</option>
+     <option value="04">Arizona</option>
+     <option value="05">Mackay & District Turtle Watch Association</option>
+     <option value="06">Marine Research Foundation</option>
+     <option value="07">Sea Turtles and Marine Mammal Conservation Program (ProCTMM)</option>
+     <option value="08">Virginia Aquarium and Marine Science Center</option>
+     <option value="09">Virginia Aquarium Stranding Response Program</option>
+     </select>
+     </span>
+     <button id="unSelect" style="display: inline;">Un-Select</button>
+     </div>
+     <div id="map"></div>
+     <!-- <h1>Turtle Tracking 1997-2017</h1>
+     <h2></h2>
+     <h3></h3> -->
+     <input type="range" class="slider">
+     <div id="year-value"></div>
+     <div class="footer">
+          <!--About:-->
+         Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
+         <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
+         <br/>Last update: 3-23-2017 1500</sub>
+     </div>
+     </div>
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -27,7 +52,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script> -->
     <!-- only needed for jenks et al -->
 
-
+</div>
     <script type="text/javascript">
         var div = d3.select("body").append("div")
             .attr("class", "tooltip")
