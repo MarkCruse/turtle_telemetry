@@ -47,7 +47,11 @@
 
         var projection = d3.geoMercator()
             // // .scale(1200)                        // play with the scale until it's 'zoomed' about right
-            .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+            .center([0, 5]) //center on Pacific ocean
+            .scale(150) // scale for Pacific
+            .rotate([-180, 0]); //rotation for Pacific
+
+        .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
 
         var geoPath = d3.geoPath()
             .projection(projection);
@@ -116,8 +120,11 @@
                     for (i = 0; i <= unique.length; i++) {
                         if (d.common_name == unique[i]) {
                             //    console.log(d.common_name,i, unique[i], colors[i])
-                            d.color = colors[i]             // add the color to objects
-                            return colors[i];}}})
+                            d.color = colors[i] // add the color to objects
+                            return colors[i];
+                        }
+                    }
+                })
 
                 .attr("cx", function(d) {
                     d.position = projection([d.lon, d.lat])
