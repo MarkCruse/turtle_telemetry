@@ -18,3 +18,6 @@
 * sphere to scroll continuous on map http://bl.ocks.org/hollasch/12e6627b4a8d7c3ceaac5297fa1d3169\
 * a count showing parsing progress
 * add code to parse date and remove 2 columns of data from csv
+
+**Notes**
+Selector based on http://bl.ocks.org/jfreels/6734823
