@@ -9,11 +9,12 @@
 - [x] repair tooltip - it's broken
 - [x] post live on github.io
 - [x] error when map is clicked - why?
-- [ ] radio button filtering on?
-- [ ] dropdown selector or list selector
+- [x] dropdown selector or list selector
+- [ ] selector filter data
+- [ ] reset button
 - [ ] figure out video software
 ---
 **Wishlist**
-* sphere to scroll continuous on map
+* sphere to scroll continuous on map http://bl.ocks.org/hollasch/12e6627b4a8d7c3ceaac5297fa1d3169\
 * a count showing parsing progress
 * add code to parse date and remove 2 columns of data from csv
