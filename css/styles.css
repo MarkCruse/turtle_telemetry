@@ -79,12 +79,6 @@ rect {
      stroke-width: 2;
 }
 
-/*.point-turtle {
-     fill: blue;*/
-     /*stroke: white;*/
-     /*opacity: .7;
-}*/
-
 .footer {
   position: bottom;
   right: 0;
@@ -157,20 +151,3 @@ svg {
     fill: none;
     pointer-events: all;
 }
-/*select {
-  border: 1px solid #D3D3D3;
-  color: #555555;
-  font-weight: normal;
-  white-space: nowrap;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0.25em;
-  font-size: 14px;
-}
-select:disabled, option:disabled, li.disabled {
-  background: silver;
-  background-color: silver !important;
-  font-style: italic;
-  pointer-events: none;
-  color: gray !important;
-}*/
