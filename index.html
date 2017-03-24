@@ -9,30 +9,12 @@
 </head>
 
 <body>
-    <div id="document" style="width: 960px;>" <div id="Title">
+    <div id="document" style="width: 960px";>
+      <div id="Title">
         <h1>Tracking Turtles</h1>
-        <div id="input">
-            <label id="proSelText">Filter data by provider: </label>
-            <span id="providerSelect" style="display: inline;">
-     <select id="providerSelector" style="display: inline;">
-     <option class="default" value="00">Select a Data Provider
-     <option value="01">Acuario de Veracruz, A.C.</option>
-     <option value="02">Jake Levenson</option>
-     <option value="03">James Cook University and Torres Strait Ranger Groups</option>
-     <option value="04">Arizona</option>
-     <option value="05">Mackay & District Turtle Watch Association</option>
-     <option value="06">Marine Research Foundation</option>
-     <option value="07">Sea Turtles and Marine Mammal Conservation Program (ProCTMM)</option>
-     <option value="08">Virginia Aquarium and Marine Science Center</option>
-     <option value="09">Virginia Aquarium Stranding Response Program</option>
-     </select>
-     </span>
-            <button id="Select" style="display: inline;">Select</button>
+        <div id="selection">
         </div>
         <div id="map"></div>
-        <!-- <h1>Turtle Tracking 1997-2017</h1>
-     <h2></h2>
-     <h3></h3> -->
         <input type="range" class="slider">
         <!-- the value of the slider = year-value -->
         <div id="year-value"></div>
@@ -54,39 +36,35 @@
 
     </div>
     <script type="text/javascript">
-        var selectorOptions = ["Select a data provider", "Acuario de Veracruz, A.C.", "Jake Levenson", "James Cook University and Torres Strait Ranger Groups", "Arizona", "Mackay & District Turtle Watch Association", "Marine Research Foundation",
-            "Sea Turtles and Marine Mammal Conservation Program (ProCTMM)", "Virginia Aquarium and Marine Science Center", "Virginia Aquarium Stranding Response Program"
-        ];
+
 
         var div = d3.select("body")
             .append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        var selector = d3.select("div")
-            .append("selector")
-            .attr("class", "selector")
-            .on("change", onchange)
+        // ********* Replace this hard coded array with a javascript built solution based on the data
+        var selectorOptions = ["Select a data provider", "Acuario de Veracruz, A.C.", "Jake Levenson", "James Cook University and Torres Strait Ranger Groups", "Arizona", "Mackay & District Turtle Watch Association", "Marine Research Foundation",
+            "Sea Turtles and Marine Mammal Conservation Program (ProCTMM)", "Virginia Aquarium and Marine Science Center", "Virginia Aquarium Stranding Response Program"
+        ];
 
-        // var x = document.getElementById("providerSelector");
-        // var value = x.options[x.selectedIndex].value;
-        // var text = x.options[x.selectedIndex].text;
-        // console.log(value);
-        var options = selector
-            .selectAll('option')
-            .data(selectorOptions).enter()
-            .append('option')
-            .text(function(d) {
-                return d;
-            });
+        var select = d3.select('#selection')
+          .append('select')
+          	.attr('class','select')
+            .on('change',onchange)
+
+        var options = select
+          .selectAll('option')
+        	.data(selectorOptions).enter()
+        	.append('option')
+        		.text(function (d) { return d; });
 
         function onchange() {
-            selectValue = d3.select('select').property('value')
-            d3.select('body')
-                .append('p')
-                .text(selectValue + ' is the last selected option.')
+        	selectValue = d3.select('select').property('value')
+        	d3.select('#selection')
+        		.append('p')
+        		.text(selectValue + ' is the last selected option.')
         };
-
         var width = 920,
             height = 580;
 

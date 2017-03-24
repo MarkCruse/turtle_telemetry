@@ -121,7 +121,13 @@ div.tooltip {
      margin-bottom: 5px;
      border: 1px, solid #d3d3d3;
 }
-
+.selector {
+     width: 200px;
+     margin-top: 10px;
+     margin-left: 200px;
+     margin-bottom: 5px;
+     border: 1px, solid #d3d3d3;
+}
 /*path {
     stroke: white;
     stroke-width: 0.5px;
@@ -151,7 +157,7 @@ svg {
     fill: none;
     pointer-events: all;
 }
-select {
+/*select {
   border: 1px solid #D3D3D3;
   color: #555555;
   font-weight: normal;
@@ -167,4 +173,4 @@ select:disabled, option:disabled, li.disabled {
   font-style: italic;
   pointer-events: none;
   color: gray !important;
-}
+}*/
