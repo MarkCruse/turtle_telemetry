@@ -9,22 +9,20 @@
 </head>
 
 <body>
-    <div id="document" style="width: 960px";>
-      <div id="Title">
-        <h1>Tracking Turtles</h1>
-        <div id="selection">
+    <div id="document" style="width: 960px" ;>
+        <div id="Title">
+            <h1>Tracking Turtles</h1>
+            <div id="selection"></div>
+            <div id="map"></div>
+            <input type="range" class="slider">
+            <div id="year-value"></div>
+            <div class="footer">
+                <!--About:-->
+                Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
+                <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
+         <br/>Last update: 3-25-2017 1400</sub>
+            </div>
         </div>
-        <div id="map"></div>
-        <input type="range" class="slider">
-        <!-- the value of the slider = year-value -->
-        <div id="year-value"></div>
-        <div class="footer">
-            <!--About:-->
-            Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
-            <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
-         <br/>Last update: 3-23-2017 2130</sub>
-        </div>
-    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
@@ -36,35 +34,13 @@
 
     </div>
     <script type="text/javascript">
-
-
         var div = d3.select("body")
             .append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
 
         // ********* Replace this hard coded array with a javascript built solution based on the data
-        var selectorOptions = ["Select a data provider", "Acuario de Veracruz, A.C.", "Jake Levenson", "James Cook University and Torres Strait Ranger Groups", "Arizona", "Mackay & District Turtle Watch Association", "Marine Research Foundation",
-            "Sea Turtles and Marine Mammal Conservation Program (ProCTMM)", "Virginia Aquarium and Marine Science Center", "Virginia Aquarium Stranding Response Program"
-        ];
 
-        var select = d3.select('#selection')
-          .append('select')
-          	.attr('class','select')
-            .on('change',onchange)
-
-        var options = select
-          .selectAll('option')
-        	.data(selectorOptions).enter()
-        	.append('option')
-        		.text(function (d) { return d; });
-
-        function onchange() {
-        	selectValue = d3.select('select').property('value')
-        	d3.select('#selection')
-        		.append('p')
-        		.text(selectValue + ' is the last selected option.')
-        };
         var width = 920,
             height = 580;
 
@@ -79,8 +55,8 @@
 
         var projection = d3.geoMercator()
             // // .scale(1200)                        // play with the scale until it's 'zoomed' about right
-            .center([0, 5]) //center on Pacific ocean
-            .scale(150) // scale for Pacific
+            .center([50, 10]) //center on Pacific ocean
+            .scale(225) // scale for Pacific
             .rotate([-180, 0]); //rotation for Pacific
 
         //    .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
@@ -111,24 +87,34 @@
 
             var dataYr = [], //array to hold years
                 dataName = [],
+                dataProvider = [],
                 datum;
 
             csvData.forEach(function(csvData) {
                 dataYr.push(csvData.year); //load year to array
                 dataName.push(csvData.common_name);
+                dataProvider.push(csvData.provider_name);
             });
+
+            var currentProvider = selectorOptions; //set currentProvider to the full array
 
             function onlyUnique(value, index, self) { //find only the unique values
                 return self.indexOf(value) === index;
             }
-            var unique = dataName.filter(onlyUnique); //contains no dups(unique)
-            unique.sort(); //sort the unique name to alphabetise
+            var uniqueName = dataName.filter(onlyUnique); //contains no dups(unique) of the turtle common name
+            uniqueName.sort(); //sort the unique name to alphabetise
+
+            var uniqueProvider = dataProvider.filter(onlyUnique); //contains no dups(unique) of the data providers
+            uniqueProvider.sort(); //sort the unique name to alphabetise
+            uniqueProvider.unshift("Select a data provider"); //add to the top of the array
+            var selectorOptions = uniqueProvider;
+            // console.log(selectorOptions);
 
             //Set legend color and points
             var colors = ["coral", "yellow", "red", "green", "purple", "darkcyan"];
-            var legend_labels = [unique[5], unique[4], unique[3], unique[2], unique[1], unique[0]];
+            var legend_labels = [uniqueName[5], uniqueName[4], uniqueName[3], uniqueName[2], uniqueName[1], uniqueName[0]];
 
-            var turtle_name = d3.scale
+            var turtle_name = d3.scale //set colors for the unique        fturtle names represented in the data
                 .category20()
                 .domain(legend_labels)
                 .range(colors);
@@ -149,15 +135,14 @@
                 .attr("r", 1) // hardcoded radius
 
                 .attr("fill", function(d) {
-                    for (i = 0; i <= unique.length; i++) {
-                        if (d.common_name == unique[i]) {
-                            //    console.log(d.common_name,i, unique[i], colors[i])
+                    for (i = 0; i <= uniqueName.length; i++) {
+                        if (d.common_name == uniqueName[i]) { // give each turtle species it's ownn color
+                            //    console.log(d.common_name,i, uniqueName[i], colors[i])
                             d.color = colors[i] // add the color to objects
                             return colors[i];
                         }
                     }
                 })
-
                 .attr("cx", function(d) {
                     d.position = projection([d.lon, d.lat])
                     if (d.position) {
@@ -174,21 +159,21 @@
                 .on('mousemove', function(d) {
                     tooltip.classed('hidden', false)
                         .attr('style', 'left:' + (d3.event.clientX + 20) + 'px; top:' + (d3.event.clientY - 20) + 'px')
-                        .html(d.common_name);
-                    d3.select("h2").text(d.common_name + ' '); //insert the name of the turtle hovered over into the h2 element
-                    d3.select("h3").text(d.date + ' ' + d.provider_name); //insert the date of point hovered over into the h3 element
+                        .html(d.common_name + ' ' + d.date + ' ' + d.provider_name);
                     d3.select(this).attr("class", "hover"); //apply CSS class rules
                 })
 
                 .on('mouseout', function(d) {
                     tooltip.classed('hidden', true)
                         .style("opacity", 0);
-                    d3.select("h2").text("");
-                    d3.select("h3").text("");
                     d3.select(this).attr("class", "none");
                 });
+            // var output = d3.select("#year-value").text(min + "-" + max);
+            var output = d3.select("#year-value").text(max);
 
-            var output = d3.select("#year-value").text(min + "-" + max);
+            updateYr(2015); //auto set the max slider value to this year;
+
+            // ----------------  B E G I N    S L I D E R   S E L E C T O R -------------------
 
             d3.select(".slider")
                 .attr("min", min)
@@ -196,40 +181,67 @@
                 .attr("value", max)
                 .attr("step", 1)
                 .on("input", function() {
-                    update(this.value);
+                    updateYr(this.value);
                 });
 
-            function update(val) {
-                output.text(Number(val));
+            function updateYr(val) {
+                output.text(Number(val)); // output the selected date to the slider text
                 track.attr("display", function(d) {
-                    if (val == 2017) {
-                        var output = d3.select("#year-value").text(min + "-" + max);
-                        return "all";
-                    } else if (val != d.year) {
+                    // this section would return all data if max year selected
+                    // eliminating this for now as all data is too much for retina display
+                    // if (val == 2017) {
+                    //   // var output = d3.select("#year-value").text(min + "-" + max);
+                    //   var output = d3.select("#year-value").text(max);
+                    //     return "all";
+                    // } else
+
+                    if (val != d.year) {
                         return "none";
                     }
+                    // else{
+                    //   console.log(d);
+                    // }
+                    if (currentProvider = d.provider_name) {
+                        // console.log(d);
+                    }
                 })
-            } //end function update
-            // this code is from an example rgdonahue has on bl.ocks.org
-            // should keep until proven unneeded with zooming to points
-            //   zoom = d3.behavior.zoom()
-            //       .scaleExtent([1, 16])
-            //       .on("zoom", function() {
-            //           g.attr("transform", "translate(" +
-            //               d3.event.translate.join(",") + ")scale(" + d3.event.scale + ")");
-            //           radius.range([2 / d3.event.scale, 30 / d3.event.scale]);
-            // track
-            //     .attr('d', geoPath.pointRadius(function(d) {
-            //         return radius(d.year);
-            //     }))
-            //     .attr("stroke-width", (1 / d3.event.scale) * 2 + "px");
-            //       });
-            //
-            //   svg.call(zoom);
 
-            // ************* Begin Legend *************
+            } //end function update for slider
+
+            // ----------------  B E G I N    D R O P D O W N   S E L E C T O R -------------------
+            // Listen to changes of the dropdown to select the provider to visualize on the map.
+            var selector = d3.select('#selection')
+                .append('select')
+                .attr('class', 'select')
+                .on('input', function() {
+                    onchangeSelector(this.value);
+                });
+
+            function onchangeSelector(newSelection) {
+                currentProvider = newSelection;
+                // console.log(currentProvider);
+                track.attr("display", function(d) {
+                    // if (currentProvider = d.provider_name){
+                    // // console.log(d); // }
+                    // console.log(currentProvider.property('value');
+                })
+            } //end function onchangeSelector for dropdown selection
+
+            var options = selector
+                .selectAll('option')
+                .data(selectorOptions)
+                .enter()
+                .append('option')
+                .text(function(d) {
+                    return d;
+                });
+
+            // ----------------  E N D    D R O P D O W N   S E L E C T O R -------------------
+
+
+            // ----------------  B E G I N    L E G E N D  -------------------
             var legend = svg.selectAll("g.legend")
-                .data(unique)
+                .data(uniqueName)
                 .enter() //create placeholders
                 .append("g") //   replace placeholders with g elements
                 .attr("class", "legend"); // and give each g a legend class
@@ -257,7 +269,10 @@
                 .text(function(d, i) {
                     return legend_labels[i];
                 });
-        };
+            // ----------------  E N D   L E G E N D  -------------------
+
+        }; // end function makeMap
+
     </script>
 </body>
 
