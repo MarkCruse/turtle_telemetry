@@ -20,7 +20,7 @@
                 <!--About:-->
                 Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
                 <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
-         <br/>Last update: 3-25-2017 2150</sub>
+         <br/>Last update: 3-26-2017 1330</sub>
             </div>
         </div>
     </div>
@@ -29,17 +29,12 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/0.9.0/simple_statistics.min.js"></script> -->
-    <!-- only needed for jenks et al -->
-
-    </div>
+    <!-- </div> -->
     <script type="text/javascript">
         var div = d3.select("body")
             .append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
-
-        // ********* Replace this hard coded array with a javascript built solution based on the data
 
         var width = 920,
             height = 580;
@@ -54,7 +49,7 @@
             .attr('class', 'hidden tooltip');
 
         var projection = d3.geoMercator()
-            // // .scale(1200)                        // play with the scale until it's 'zoomed' about right
+            // .scale(1200)                        // sets the 'zoom'
             .center([50, 10]) //center on Pacific ocean
             .scale(225) // scale for Pacific
             .rotate([-180, 0]); //rotation for Pacific
@@ -88,6 +83,7 @@
             var dataYr = [], //array to hold years
                 dataName = [],
                 dataProvider = [],
+                dataYrProvider = [],
                 datum;
 
             csvData.forEach(function(csvData) {
@@ -101,15 +97,15 @@
             }
             var uniqueName = dataName.filter(onlyUnique); //contains no dups(unique) of the turtle common name
             uniqueName.sort(); //sort the unique name to alphabetise
-
+            var topOfSelection = "Select a data provider (Reset map)";
             var uniqueProvider = dataProvider.filter(onlyUnique); //contains no dups(unique) of the data providers
             uniqueProvider.sort(); //sort the unique name to alphabetise
-            uniqueProvider.unshift("Select a data provider"); //add to the top of the array
+            uniqueProvider.unshift(topOfSelection); //add to the top of the array
             var selectorOptions = uniqueProvider;
             var currentProvider = selectorOptions;
 
             //Set legend color and points
-            var colors = ["coral", "yellow", "red", "green", "purple", "darkcyan"];
+            var colors = ["coral", "yellow", "red", "green", "purple", "fuchsia"];
             var legend_labels = [uniqueName[5], uniqueName[4], uniqueName[3], uniqueName[2], uniqueName[1], uniqueName[0]];
 
             var turtle_name = d3.scale //set colors for the unique        fturtle names represented in the data
@@ -124,7 +120,6 @@
             //   radius = d3.scale.sqrt()
             //       .domain([min, max])
             //       .range([2, 30]);
-
 
             var track = g.selectAll("circle")
                 .data(csvData)
@@ -169,7 +164,8 @@
             // var output = d3.select("#year-value").text(min + "-" + max);
             var output = d3.select("#year-value").text(max);
 
-            updateYr(2010, currentProvider); //auto set the max slider value to this year;
+            // updateYr(2010, 2013, currentProvider); //auto set the max slider value to this year;
+            // console.log('**************** I should only appear 1 time');
 
             // ----------------  B E G I N    S L I D E R   S E L E C T O R -------------------
 
@@ -179,62 +175,99 @@
                 .attr("value", min)
                 .attr("step", 1)
                 .on("input", function() {
-                    updateYr(this.value, currentProvider);
+                    console.log('Invoked from slider ' + currentProvider +' '+ this.value +' '+  this.value);
+                    updateYr(this.value, this.value, currentProvider);
                 });
 
-            function updateYr(val, currentProvider) {
-                output.text(Number(val)); // output the selected date to the slider text
-                track.attr("display", function(d) {   //display only the points with matching year
-                  if (currentProvider == selectorOptions){
-                    if (val != d.year) {
-                        return "none";
-                      }
-                  }else{
-                    if (currentProvider == d.provider_name){
-                      if (val != d.year) {
+            function updateYr(val1, val2, currentProvider) {
+// console.log('Inside the updateYr function '+currentProvider+' '+val1+' '+val2);
+                output.text(Number(val1)); // output the selected date to the slider text
+                track.attr("display", function(d) { //display only the points with matching year
+                    if (val2 > val1){
+                        if (currentProvider != d.provider_name) {
+
+                            // console.log(d.year+' '+d.provider_name);
+                          // console.log(d.provider_name + ' ' + currentProvider);
+                            if (d.year > val1 || d.year < val2) {
+                              //  console.log(d.provider_name+' Year set to: '+ val1 + ' '+d.year);
+                                return "none";
+                            };
+                        };
+                        if (currentProvider == selectorOptions) {
+                          // console.log('Yes equal selectorOptions');
+                            if (d.year < val1 || d.year > val2){    //removes points not in date range
+                                return "none";
+                            }
+                        };
+                    }else if (val1 == val2){
+                      // console.log(currentProvider+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
+
+                      // if (currentProvider != d.provider_name) {;
+                      //
+                      // };
+
+                      if (currentProvider == d.provider_name) {
+                        //  console.log(currentProvider+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
+
+                          if (d.year != val1){
+                              return "none";
+                          };
+                      }else if (currentProvider != selectorOptions) {
                         return "none";
                       };
+                      if (currentProvider == selectorOptions) {
+                        // console.log('really?');
+                          if (d.year != val1){    //removes points not in date range
+                              return "none";
+                          }
                     };
-                  }
+                  };
                 })
             } //end function update for slider
 
             // ----------------  B E G I N    D R O P D O W N   S E L E C T O R -------------------
+
             // Listen to changes of the dropdown to select the provider to visualize on the map.
-            var selector = d3.select('#selection')
-                .append('select')
-                .attr('class', 'select')
-                .on('change', function() {
-                  onchangeSelector(this.value);
+            var selector = d3.select('#selection').append('select').attr('class', 'select').on('change', function() {
+                    onchangeSelector(this.value);
                 });
-//
-//  ------------------------------------------------------------
-//   THE onchangeSelector NEEDS to have the data range set to the
-//   dates applicable to the provider
-//
+            // load the provider_name into the dropdown
+            var options = selector.selectAll('option').data(selectorOptions).enter().append('option').text(function(d) {
+                return d;
+            });
+
             function onchangeSelector(newSelection) {
-                currentProvider = newSelection;
-                slide.attr("min", min)
-                    .attr("max", max)
-                    .attr("value", max);
+                currentProvider = newSelection; //THIS must stay!!
+                var tdataYr = [];
                 track.attr("display", function(d) {
-                    if (currentProvider != d.provider_name){
-                      return "none";
-                  }
+                    if (currentProvider != d.provider_name) {
+                        return "none"
+                    } else {
+                        tdataYr.push(d.year); //load year to array
+                    };
                 })
+                if (currentProvider == topOfSelection){
+
+                  var currentProvider = selectorOptions;
+                  var min = 2010;
+                  var max = 2010;
+
+                  console.log(currentProvider);
+                }else{
+                      // get the start year and end year range for the selected provider_name
+                      var min = Math.min.apply(Math, tdataYr), //get the min year
+                          max = Math.max.apply(Math, tdataYr); //get the max year
+
+
+                  };
+                // console.log(min + ',' + max);
+                slide.attr("min", min).attr("max", max).attr("value", min);
+                output.text(Number(min)); // output the selected date to the slider text
+                console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' minYr: '+min+' maxYr: '+max);
+                updateYr(min,max,currentProvider);
             } //end function onchangeSelector for dropdown selection
 
-            var options = selector
-                .selectAll('option')
-                .data(selectorOptions)
-                .enter()
-                .append('option')
-                .text(function(d) {
-                    return d;
-                });
-
             // ----------------  E N D    D R O P D O W N   S E L E C T O R -------------------
-
 
             // ----------------  B E G I N    L E G E N D  -------------------
             var legend = svg.selectAll("g.legend")
@@ -267,9 +300,9 @@
                     return legend_labels[i];
                 });
             // ----------------  E N D   L E G E N D  -------------------
+            updateYr(2010, 2010, currentProvider); //auto set the max slider value to this year;
 
         }; // end function makeMap
-
     </script>
 </body>
 
