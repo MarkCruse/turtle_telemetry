@@ -20,7 +20,7 @@
                 <!--About:-->
                 Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
                 <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
-         <br/>Last update: 3-26-2017 1330</sub>
+         <!-- <br/>Last update: 3-26-2017 1330</sub> -->
             </div>
         </div>
     </div>
@@ -175,53 +175,57 @@
                 .attr("value", min)
                 .attr("step", 1)
                 .on("input", function() {
-                    console.log('Invoked from slider ' + currentProvider +' '+ this.value +' '+  this.value);
+                    // console.log('Invoked from slider ' + currentProvider +' '+ this.value +' '+  this.value);
                     updateYr(this.value, this.value, currentProvider);
                 });
 
-            function updateYr(val1, val2, currentProvider) {
-// console.log('Inside the updateYr function '+currentProvider+' '+val1+' '+val2);
+            function updateYr(val1, val2, rcvProvider) {
+                // console.log('Recieving info '+rcvProvider+' '+val1+' '+val2);
+                currentProvider = rcvProvider;
                 output.text(Number(val1)); // output the selected date to the slider text
                 track.attr("display", function(d) { //display only the points with matching year
                     if (val2 > val1){
-                        if (currentProvider != d.provider_name) {
-
-                            // console.log(d.year+' '+d.provider_name);
-                          // console.log(d.provider_name + ' ' + currentProvider);
-                            if (d.year > val1 || d.year < val2) {
-                              //  console.log(d.provider_name+' Year set to: '+ val1 + ' '+d.year);
-                                return "none";
-                            };
-                        };
-                        if (currentProvider == selectorOptions) {
-                          // console.log('Yes equal selectorOptions');
-                            if (d.year < val1 || d.year > val2){    //removes points not in date range
-                                return "none";
-                            }
-                        };
-                    }else if (val1 == val2){
-                      // console.log(currentProvider+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
-
-                      // if (currentProvider != d.provider_name) {;
-                      //
-                      // };
-
-                      if (currentProvider == d.provider_name) {
-                        //  console.log(currentProvider+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
-
+                      if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
+                        if (d.year < val1 || d.year > val2){
+                              return "none";
+                          };
+                      }else{
+                         return "none";
+                      }; //  if (currentProvider != d.provider_name) {
+                                            //       // console.log(d.year+' '+d.provider_name);
+                                            //     // console.log(d.provider_name + ' ' + currentProvider);
+                                            //       if (d.year > val1 || d.year < val2) {
+                                            //         //  console.log(d.provider_name+' Year set to: '+ val1 + ' '+d.year);
+                                            //           return "none";
+                                            //       };
+                                            //   };
+                                            //   if (currentProvider == selectorOptions) {
+                                            //     // console.log('Yes equal selectorOptions');
+                                            //       if (d.year < val1 || d.year > val2){    //removes points not in date range
+                                            //           return "none";
+                                            //       }
+                                            //   };
+                    }else {   // val1 = val2
+                      // console.log(currentProvider);
+                      if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
+                        // if (currentProvider == d.provider_name || currentProvider == selectorOptions) {
+                        // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
                           if (d.year != val1){
                               return "none";
                           };
-                      }else if (currentProvider != selectorOptions) {
-                        return "none";
+                      }else{
+                         return "none";
                       };
-                      if (currentProvider == selectorOptions) {
-                        // console.log('really?');
-                          if (d.year != val1){    //removes points not in date range
-                              return "none";
-                          }
+                      // if (currentProvider == selectorOptions) {
+                      //   console.log('yes')
+                      //     // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
+                      //     if (d.year != val1){
+                      //         return "none";
+                      //     };
+                      // }else{
+                      //   // console.log(selectorOptions);
+                      // };
                     };
-                  };
                 })
             } //end function update for slider
 
@@ -232,7 +236,7 @@
                     onchangeSelector(this.value);
                 });
             // load the provider_name into the dropdown
-            var options = selector.selectAll('option').data(selectorOptions).enter().append('option').text(function(d) {
+            var options = selector.selectAll('option').data(currentProvider).enter().append('option').text(function(d) {
                 return d;
             });
 
@@ -247,24 +251,31 @@
                     };
                 })
                 if (currentProvider == topOfSelection){
-
                   var currentProvider = selectorOptions;
-                  var min = 2010;
-                  var max = 2010;
+                  // console.log('Reset invoked'+' ');
+                  var min = Math.min.apply(Math, dataYr), //get the min year
+                      max = Math.max.apply(Math, dataYr); //get the max year
+                  // console.log(currentProvider);
 
-                  console.log(currentProvider);
+                  slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
+                  output.text(Number(min)); // output the selected date to the slider text
+                  updateYr(2010, 2010, currentProvider);
                 }else{
                       // get the start year and end year range for the selected provider_name
                       var min = Math.min.apply(Math, tdataYr), //get the min year
                           max = Math.max.apply(Math, tdataYr); //get the max year
-
+                      // console.log(min + ',' + max);
+                      slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
+                      output.text(Number(min)); // output the selected date to the slider text
+                      // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
+                      updateYr(min,max,currentProvider);
 
                   };
-                // console.log(min + ',' + max);
-                slide.attr("min", min).attr("max", max).attr("value", min);
-                output.text(Number(min)); // output the selected date to the slider text
-                console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' minYr: '+min+' maxYr: '+max);
-                updateYr(min,max,currentProvider);
+                // // console.log(min + ',' + max);
+                // slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
+                // output.text(Number(min)); // output the selected date to the slider text
+                // // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
+                // updateYr(min,max,currentProvider);
             } //end function onchangeSelector for dropdown selection
 
             // ----------------  E N D    D R O P D O W N   S E L E C T O R -------------------
@@ -300,6 +311,7 @@
                     return legend_labels[i];
                 });
             // ----------------  E N D   L E G E N D  -------------------
+
             updateYr(2010, 2010, currentProvider); //auto set the max slider value to this year;
 
         }; // end function makeMap
