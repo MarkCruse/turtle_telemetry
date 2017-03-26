@@ -20,7 +20,7 @@
                 <!--About:-->
                 Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
                 <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
-         <br/>Last update: 3-25-2017 1400</sub>
+         <br/>Last update: 3-25-2017 2150</sub>
             </div>
         </div>
     </div>
@@ -189,6 +189,12 @@
                     if (val != d.year) {
                         return "none";
                       }
+                  }else{
+                    if (currentProvider == d.provider_name){
+                      if (val != d.year) {
+                        return "none";
+                      };
+                    };
                   }
                 })
             } //end function update for slider
@@ -201,7 +207,11 @@
                 .on('change', function() {
                   onchangeSelector(this.value);
                 });
-
+//
+//  ------------------------------------------------------------
+//   THE onchangeSelector NEEDS to have the data range set to the
+//   dates applicable to the provider
+//
             function onchangeSelector(newSelection) {
                 currentProvider = newSelection;
                 slide.attr("min", min)
