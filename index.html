@@ -191,20 +191,7 @@
                           };
                       }else{
                          return "none";
-                      }; //  if (currentProvider != d.provider_name) {
-                                            //       // console.log(d.year+' '+d.provider_name);
-                                            //     // console.log(d.provider_name + ' ' + currentProvider);
-                                            //       if (d.year > val1 || d.year < val2) {
-                                            //         //  console.log(d.provider_name+' Year set to: '+ val1 + ' '+d.year);
-                                            //           return "none";
-                                            //       };
-                                            //   };
-                                            //   if (currentProvider == selectorOptions) {
-                                            //     // console.log('Yes equal selectorOptions');
-                                            //       if (d.year < val1 || d.year > val2){    //removes points not in date range
-                                            //           return "none";
-                                            //       }
-                                            //   };
+                      };
                     }else {   // val1 = val2
                       // console.log(currentProvider);
                       if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
@@ -216,15 +203,6 @@
                       }else{
                          return "none";
                       };
-                      // if (currentProvider == selectorOptions) {
-                      //   console.log('yes')
-                      //     // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
-                      //     if (d.year != val1){
-                      //         return "none";
-                      //     };
-                      // }else{
-                      //   // console.log(selectorOptions);
-                      // };
                     };
                 })
             } //end function update for slider
@@ -271,11 +249,7 @@
                       updateYr(min,max,currentProvider);
 
                   };
-                // // console.log(min + ',' + max);
-                // slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
-                // output.text(Number(min)); // output the selected date to the slider text
-                // // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
-                // updateYr(min,max,currentProvider);
+
             } //end function onchangeSelector for dropdown selection
 
             // ----------------  E N D    D R O P D O W N   S E L E C T O R -------------------
