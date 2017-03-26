@@ -96,8 +96,6 @@
                 dataProvider.push(csvData.provider_name);
             });
 
-            var currentProvider = selectorOptions; //set currentProvider to the full array
-
             function onlyUnique(value, index, self) { //find only the unique values
                 return self.indexOf(value) === index;
             }
@@ -108,7 +106,7 @@
             uniqueProvider.sort(); //sort the unique name to alphabetise
             uniqueProvider.unshift("Select a data provider"); //add to the top of the array
             var selectorOptions = uniqueProvider;
-            // console.log(selectorOptions);
+            var currentProvider = selectorOptions;
 
             //Set legend color and points
             var colors = ["coral", "yellow", "red", "green", "purple", "darkcyan"];
@@ -171,41 +169,28 @@
             // var output = d3.select("#year-value").text(min + "-" + max);
             var output = d3.select("#year-value").text(max);
 
-            updateYr(2015); //auto set the max slider value to this year;
+            updateYr(2010, currentProvider); //auto set the max slider value to this year;
 
             // ----------------  B E G I N    S L I D E R   S E L E C T O R -------------------
 
-            d3.select(".slider")
+            var slide = d3.select(".slider")
                 .attr("min", min)
                 .attr("max", max)
-                .attr("value", max)
+                .attr("value", min)
                 .attr("step", 1)
                 .on("input", function() {
-                    updateYr(this.value);
+                    updateYr(this.value, currentProvider);
                 });
 
-            function updateYr(val) {
+            function updateYr(val, currentProvider) {
                 output.text(Number(val)); // output the selected date to the slider text
-                track.attr("display", function(d) {
-                    // this section would return all data if max year selected
-                    // eliminating this for now as all data is too much for retina display
-                    // if (val == 2017) {
-                    //   // var output = d3.select("#year-value").text(min + "-" + max);
-                    //   var output = d3.select("#year-value").text(max);
-                    //     return "all";
-                    // } else
-
+                track.attr("display", function(d) {   //display only the points with matching year
+                  if (currentProvider == selectorOptions){
                     if (val != d.year) {
                         return "none";
-                    }
-                    // else{
-                    //   console.log(d);
-                    // }
-                    if (currentProvider = d.provider_name) {
-                        // console.log(d);
-                    }
+                      }
+                  }
                 })
-
             } //end function update for slider
 
             // ----------------  B E G I N    D R O P D O W N   S E L E C T O R -------------------
@@ -213,17 +198,19 @@
             var selector = d3.select('#selection')
                 .append('select')
                 .attr('class', 'select')
-                .on('input', function() {
-                    onchangeSelector(this.value);
+                .on('change', function() {
+                  onchangeSelector(this.value);
                 });
 
             function onchangeSelector(newSelection) {
                 currentProvider = newSelection;
-                // console.log(currentProvider);
+                slide.attr("min", min)
+                    .attr("max", max)
+                    .attr("value", max);
                 track.attr("display", function(d) {
-                    // if (currentProvider = d.provider_name){
-                    // // console.log(d); // }
-                    // console.log(currentProvider.property('value');
+                    if (currentProvider != d.provider_name){
+                      return "none";
+                  }
                 })
             } //end function onchangeSelector for dropdown selection
 
