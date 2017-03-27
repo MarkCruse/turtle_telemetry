@@ -17,7 +17,7 @@
 - [ ] debug slider not resetting to min value
 - [ ] display min and max values to the slider
 - [ ] size points w/zoom  
-- [ ] stroke lines are a bit large on zoom
+- [x] stroke lines are a bit large on zoom
 - [ ]
 ---
 **Wishlist**

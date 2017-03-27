@@ -1,14 +1,14 @@
 /* custom CSS rules */
-
-
 #document {
   margin: 0 auto;
       font-family: Montserrat, sans-serif;
 }
-#mapTitle {
+#maptitle {
   font-size: 28px;
   font-weight: normal;
   line-height: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 b {
@@ -86,7 +86,7 @@ h3 {
 .foreground {
   fill: none;
   stroke: #333;
-  stroke-width: 1.5px;
+  stroke-width: .5px;
 }
 
 .graticule {
@@ -155,15 +155,21 @@ div.tooltip {
 }
 
 .land {
-     opacity: .7;
      fill: #d7c7ad;
+     opacity: .7;
      stroke: #766951;
+     stroke-opacity: .4;
+     stroke-width: 1;
+     stroke-linejoin: round;
+     stroke-linecap: round;
+     vector-effect: non-scaling-stroke;
 }
 
 .boundary {
     fill: none;
     /*stroke: #fff;*/
-    stroke: #a5967e;
+    stroke: #a5967e
+    stroke-width: .17px;
     stroke-linejoin: round;
     stroke-linecap: round;
     vector-effect: non-scaling-stroke;
