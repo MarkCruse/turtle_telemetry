@@ -18,7 +18,7 @@ body {
     padding: 0;
     margin: 0;
     /*background: whitesmoke;*/
-    background: #fafafa;
+    background: #f7f3ee;
     font-family: Montserrat, sans-serif;
     border: 1px;
 }
@@ -27,7 +27,8 @@ h1, h2, h3{
     /*position: absolute;*/
     font-size: 2em;
     font-weight: 100;
-    color: #662002;
+    /*color: #662002;*/
+    color: #817767;
 }
 
 p {
@@ -73,8 +74,9 @@ h3 {
     font-size: 12px;
 }
 
-rect {
-     stroke-width: 2;
+.rect {
+     stroke-width: 5;
+     border: 0px solid #d3d3d3;
 }
 
 .background {
@@ -116,30 +118,47 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
-
-#year-value {
-     width: 200px;
-     margin-left: 10px;
-     margin-bottom: 10px;
-     text-align: center;
+.select-line {
+     width: 820px;
+     height: 40px;
+     margin-top: 10px;
+     margin-left: 5px;
+     margin-bottom: 0px;
+     border: 1px, solid #d3d3d3;
+     background: #e7ddcd;
 }
+
 
 .slider {
      width: 200px;
-     margin-top: 10px;
-     margin-left: 10px;
-     margin-bottom: 5px;
-     border: 1px, solid #d3d3d3;
-}
-.selector {
-     width: 200px;
-     margin-top: 10px;
-     margin-left: 200px;
-     margin-bottom: 5px;
-     border: 1px, solid #d3d3d3;
-     background: #fafafa;
+     margin-top: 1px;
+     margin-left: 5px;
+     margin-bottom: 0px;
+     /*border: 1px, solid #d3d3d3;*/
 }
 
+#year-value {
+     width: 200px;
+     margin-top: 0px;
+     margin-left: 1px;
+     margin-bottom: 1px;
+     font-size: 12px;
+     text-align: center;
+}
+.selector {
+     width: 300px;
+     height: 20px;
+     margin-top: 10px;
+     margin-left: 5px;
+     margin-bottom: 0px;
+     border: 1px, solid #d3d3d3;
+     background: #e7ddcd;
+}
+
+/*#selector, #slider, #year-value
+{
+    display:inline-block;
+}*/
 /*svg {
   background: #bbd0f7;
 }*/

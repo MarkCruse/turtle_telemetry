@@ -16,10 +16,9 @@
             <div id="map"></div>
             <input type="range" class="slider">
             <div id="year-value"></div>
-            <div class="footer">
-                <p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
-                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p>
-                </br/> Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
+            <div id="text-box" style="width: 800px"><p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
+                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p></div>
+          <div class="footer" style="width: 800px">Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
                 <sub>Created: March 2017<br/>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
          <!-- <br/>Last update: 3-26-2017 1330</sub> -->
             </div>
@@ -38,7 +37,7 @@
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        var width = 920,
+        var width = 820,
             height = 460;
 
        var zoom = d3.behavior.zoom()
@@ -260,7 +259,7 @@
             // ----------------  B E G I N    D R O P D O W N   S E L E C T O R -------------------
 
             // Listen to changes of the dropdown to select the provider to visualize on the map.
-            var selector = d3.select('#selection').append('select').attr('class', 'select').on('change', function() {
+            var selector = d3.select('#selection').append('select').attr('class', 'selector').on('change', function() {
                 onchangeSelector(this.value);
             });
             // load the provider_name into the dropdown
