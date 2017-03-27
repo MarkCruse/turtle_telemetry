@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">-->
 
 <head>
     <meta charset="utf-8">
@@ -17,11 +17,11 @@
             <input type="range" class="slider">
             <div id="year-value"></div>
             <div class="footer">
-                Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/>
-
-              </br/>
-                Map designed by:&nbsp;&nbsp;Mark Cruse - March 2017<br/>
-                <sub>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
+                <p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
+                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/>
+</p>
+                </br/> Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
+                <sub>Created: March 2017<br/>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
          <!-- <br/>Last update: 3-26-2017 1330</sub> -->
             </div>
         </div>
@@ -42,24 +42,38 @@
         var width = 920,
             height = 460;
 
-        const zoom = d3.zoom()
-     //    .scaleExtent([1 / 4, 9])
-        .scaleExtent([1, 19])
-
-            .on('zoom', function() {
-                d3.select('g').attr('transform', d3.event.transform)
-            });
+       var zoom = d3.behavior.zoom()
+         // only scale up, e.g. between 1x and 50x
+         .scaleExtent([1, 30])
+         .on("zoom", function() {
+           // the "zoom" event populates d3.event with an object that has
+           // a "translate" property (a 2-element Array in the form [x, y])
+           // and a numeric "scale" property
+           var e = d3.event,
+               // now, constrain the x and y components of the translation by the
+               // dimensions of the viewport
+               tx = Math.min(0, Math.max(e.translate[0], width - width * e.scale)),
+               ty = Math.min(0, Math.max(e.translate[1], height - height * e.scale));
+           // then, update the zoom behavior's internal translation, so that
+           // it knows how to properly manipulate it on the next movement
+           zoom.translate([tx, ty]);
+           // and finally, update the <g> element's transform attribute with the
+           // correct translation and scale (in reverse order)
+           g.attr("transform", [
+             "translate(" + [tx, ty] + ")",
+             "scale(" + e.scale + ")"
+           ].join(" "));
+         });
 
         var tooltip = d3.select('#map').append('div')
             .attr('class', 'hidden tooltip');
 
-     //    var projection = d3.geoMercator()
-     //        // .scale(1200)                        // sets the 'zoom'
-     //        .center([50, 10]) //center on Pacific ocean
-     //        .scale(225) // scale for Pacific
-     //        .rotate([-180, 0]); //rotation for Pacific
+        //    var projection = d3.geoMercator()
+        //        // .scale(1200)    // sets the 'zoom'
+        //        .center([50, 10]) //center on Pacific ocean
+        //        .scale(225) // scale for Pacific
+        //        .rotate([-180, 0]); //rotation for Pacific
 
-     //     //  .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
 
         var projection = d3.geo.eckert4()
             .scale(175)
@@ -70,33 +84,33 @@
         var geoPath = d3.geoPath()
             .projection(projection);
 
-     var graticule = d3.geo.graticule();
+        var graticule = d3.geo.graticule();
 
         var svg = d3.select("#map").append("svg")
             .attr("width", width)
             .attr("height", height)
             .call(zoom);
 
-//
-// // ------------Add for graticule  --------------------------
-//             svg.append("defs").append("path")
-//                 .datum({type: "Sphere"})
-//                 .attr("id", "sphere")
-//                 .attr("d", geoPath);
-//
-//             svg.append("use")
-//                 .attr("class", "stroke")
-//                 .attr("xlink:href", "#sphere");
-//
-//             svg.append("use")
-//                 .attr("class", "fill")
-//                 .attr("xlink:href", "#sphere");
-//
-//             svg.append("path")
-//                 .datum(graticule)
-//                 .attr("class", "graticule")
-//                 .attr("d", geoPath);
-// // ------------End additions  for graticule  --------------------------
+        //
+        // // ------------Add for graticule  --------------------------
+        //             svg.append("defs").append("path")
+        //                 .datum({type: "Sphere"})
+        //                 .attr("id", "sphere")
+        //                 .attr("d", geoPath);
+        //
+        //             svg.append("use")
+        //                 .attr("class", "stroke")
+        //                 .attr("xlink:href", "#sphere");
+        //
+        //             svg.append("use")
+        //                 .attr("class", "fill")
+        //                 .attr("xlink:href", "#sphere");
+        //
+        //             svg.append("path")
+        //                 .datum(graticule)
+        //                 .attr("class", "graticule")
+        //                 .attr("d", geoPath);
+        // // ------------End additions  for graticule  --------------------------
 
         var g = svg.append("g");
 
@@ -217,25 +231,25 @@
                 currentProvider = rcvProvider;
                 output.text(Number(val1)); // output the selected date to the slider text
                 track.attr("display", function(d) { //display only the points with matching year
-                    if (val2 > val1){
-                      if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
-                        if (d.year < val1 || d.year > val2){
-                              return "none";
-                          };
-                      }else{
-                         return "none";
-                      };
-                    }else {   // val1 = val2
-                      // console.log(currentProvider);
-                      if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
-                        // if (currentProvider == d.provider_name || currentProvider == selectorOptions) {
-                        // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
-                          if (d.year != val1){
-                              return "none";
-                          };
-                      }else{
-                         return "none";
-                      };
+                    if (val2 > val1) {
+                        if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
+                            if (d.year < val1 || d.year > val2) {
+                                return "none";
+                            };
+                        } else {
+                            return "none";
+                        };
+                    } else { // val1 = val2
+                        // console.log(currentProvider);
+                        if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
+                            // if (currentProvider == d.provider_name || currentProvider == selectorOptions) {
+                            // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
+                            if (d.year != val1) {
+                                return "none";
+                            };
+                        } else {
+                            return "none";
+                        };
                     };
                 })
             } //end function update for slider
@@ -244,8 +258,8 @@
 
             // Listen to changes of the dropdown to select the provider to visualize on the map.
             var selector = d3.select('#selection').append('select').attr('class', 'select').on('change', function() {
-                    onchangeSelector(this.value);
-                });
+                onchangeSelector(this.value);
+            });
             // load the provider_name into the dropdown
             var options = selector.selectAll('option').data(currentProvider).enter().append('option').text(function(d) {
                 return d;
@@ -261,27 +275,27 @@
                         tdataYr.push(d.year); //load year to array
                     };
                 })
-                if (currentProvider == topOfSelection){
-                  var currentProvider = selectorOptions;
-                  // console.log('Reset invoked'+' ');
-                  var min = Math.min.apply(Math, dataYr), //get the min year
-                      max = Math.max.apply(Math, dataYr); //get the max year
-                  // console.log(currentProvider);
+                if (currentProvider == topOfSelection) {
+                    var currentProvider = selectorOptions;
+                    // console.log('Reset invoked'+' ');
+                    var min = Math.min.apply(Math, dataYr), //get the min year
+                        max = Math.max.apply(Math, dataYr); //get the max year
+                    // console.log(currentProvider);
 
-                  slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
-                  output.text(Number(min)); // output the selected date to the slider text
-                  updateYr(2010, 2010, currentProvider);
-                }else{
-                      // get the start year and end year range for the selected provider_name
-                      var min = Math.min.apply(Math, tdataYr), //get the min year
-                          max = Math.max.apply(Math, tdataYr); //get the max year
-                      // console.log(min + ',' + max);
-                      slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
-                      output.text(Number(min)); // output the selected date to the slider text
-                      // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
-                      updateYr(min,max,currentProvider);
+                    slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
+                    output.text(Number(min)); // output the selected date to the slider text
+                    updateYr(2010, 2010, currentProvider);
+                } else {
+                    // get the start year and end year range for the selected provider_name
+                    var min = Math.min.apply(Math, tdataYr), //get the min year
+                        max = Math.max.apply(Math, tdataYr); //get the max year
+                    // console.log(min + ',' + max);
+                    slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
+                    output.text(Number(min)); // output the selected date to the slider text
+                    // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
+                    updateYr(min, max, currentProvider);
 
-                  };
+                };
 
             } //end function onchangeSelector for dropdown selection
 
@@ -323,8 +337,6 @@
 
 
         }; // end function makeMap
-
-
     </script>
 </body>
 

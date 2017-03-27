@@ -12,7 +12,8 @@
 - [x] reset button
 - [x] figure out video software
 - [x] correct issue of being able to zoom out too far
-- [ ] block text at bottom
+- [x] block text at bottom
+- [ ] make tooltip useful
 - [ ] debug slider not resetting to min value
 - [ ] display min and max values to the slider
 - [ ] size points w/zoom  
