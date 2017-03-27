@@ -37,8 +37,12 @@
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        var width = 920,
+        var width = 912,
             height = 460;
+
+        radius = d3.scale.sqrt()
+           .domain([1,1])
+           .range([2,30]);
 
        var zoom = d3.behavior.zoom()
          // only scale up, e.g. between 1x and 50x
@@ -57,21 +61,16 @@
            zoom.translate([tx, ty]);
            // and finally, update the <g> element's transform attribute with the
            // correct translation and scale (in reverse order)
-           g.attr("transform", [
-             "translate(" + [tx, ty] + ")",
-             "scale(" + e.scale + ")"
-           ].join(" "));
+           g.attr("transform", ["translate(" + [tx, ty] + ")","scale(" + e.scale + ")"]
+               .join(" "));
+                 radius.range([2/d3.event.scale, 30/d3.event.scale]);
+                 console.log(radius.range);
+               //   track
+               //      .attr('d',path.pointRadius)
          });
 
         var tooltip = d3.select('#map').append('div')
             .attr('class', 'hidden tooltip');
-
-        //    var projection = d3.geoMercator()
-        //        // .scale(1200)    // sets the 'zoom'
-        //        .center([50, 10]) //center on Pacific ocean
-        //        .scale(225) // scale for Pacific
-        //        .rotate([-180, 0]); //rotation for Pacific
-
 
         var projection = d3.geoMercator()
             .scale(145)
@@ -91,7 +90,6 @@
             .attr("width", width)
             .attr("height", height)
             .call(zoom);
-
 
         // ------------Add for graticule  --------------------------
 
