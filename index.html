@@ -31,7 +31,8 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
-    <!-- </div> -->
+    <script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
+
     <script type="text/javascript">
         var div = d3.select("body")
             .append("div")
@@ -39,7 +40,7 @@
             .style("opacity", 0);
 
         var width = 920,
-            height = 580;
+            height = 460;
 
         const zoom = d3.zoom()
             .scaleExtent([1 / 4, 9])
@@ -50,13 +51,19 @@
         var tooltip = d3.select('#map').append('div')
             .attr('class', 'hidden tooltip');
 
-        var projection = d3.geoMercator()
-            // .scale(1200)                        // sets the 'zoom'
-            .center([50, 10]) //center on Pacific ocean
-            .scale(225) // scale for Pacific
-            .rotate([-180, 0]); //rotation for Pacific
+     //    var projection = d3.geoMercator()
+     //        // .scale(1200)                        // sets the 'zoom'
+     //        .center([50, 10]) //center on Pacific ocean
+     //        .scale(225) // scale for Pacific
+     //        .rotate([-180, 0]); //rotation for Pacific
 
-        //    .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+     //     //  .translate([width / 2, height / 2]); // center the svg (0,0 is top, left)
+
+        var projection = d3.geo.eckert4()
+            .scale(175)
+            .translate([width / 2, height / 2])
+            .precision(.1);
+
 
         var geoPath = d3.geoPath()
             .projection(projection);
