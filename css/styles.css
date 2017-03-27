@@ -17,7 +17,8 @@ b {
 body {
     padding: 0;
     margin: 0;
-    background: whitesmoke;
+    /*background: whitesmoke;*/
+    background: #fafafa;
     font-family: Montserrat, sans-serif;
     border: 1px;
 }
@@ -55,14 +56,14 @@ h3 {
     margin-top: 10px;
     margin-left: 1px;
     /*margin-bottom: 5px auto;*/
-    border: 1px solid #d3d3d3;
+    border: 0px solid #d3d3d3;
 }
 
-.topology {
-     stroke: #fff;
-     fill: #e5e5e5;
+/*.topology {
      opacity: .7;
-}
+     fill: #d7c7ad;
+     stroke: #766951;
+}*/
 
 .hover {
     fill: yellow;
@@ -75,11 +76,22 @@ h3 {
 rect {
      stroke-width: 2;
 }
+
+.background {
+  fill: #a4bac7;
+}
+
+.foreground {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
 .graticule {
   fill: none;
-  stroke: #777;
-  stroke-width: .5px;
-  stroke-opacity: .5;
+  stroke: #fff;
+  stroke-width: .17px;
+  /*stroke-opacity: .5;*/
 }
 
 .footer {
@@ -91,6 +103,7 @@ rect {
   background-color: #efefef;
   text-align: center;
 }
+
 div.tooltip {
     position: absolute;
     text-align: center;
@@ -98,7 +111,7 @@ div.tooltip {
     height: 15px;
     padding: 2px;
     font-size: 12px;
-    background: #FFFFE0;
+    background: #f0eae0;
     border: 1px;
     border-radius: 8px;
     pointer-events: none;
@@ -106,7 +119,7 @@ div.tooltip {
 
 #year-value {
      width: 200px;
-     margin-left: 200px;
+     margin-left: 10px;
      margin-bottom: 10px;
      text-align: center;
 }
@@ -114,7 +127,7 @@ div.tooltip {
 .slider {
      width: 200px;
      margin-top: 10px;
-     margin-left: 200px;
+     margin-left: 10px;
      margin-bottom: 5px;
      border: 1px, solid #d3d3d3;
 }
@@ -124,29 +137,30 @@ div.tooltip {
      margin-left: 200px;
      margin-bottom: 5px;
      border: 1px, solid #d3d3d3;
+     background: #fafafa;
 }
 
-svg {
+/*svg {
   background: #bbd0f7;
-}
+}*/
 
-.sphere {
-    fill: #fff;
-}
 
 .land {
-     fill: gray;
+     opacity: .7;
+     fill: #d7c7ad;
+     stroke: #766951;
 }
 
 .boundary {
     fill: none;
-    stroke: #fff;
+    /*stroke: #fff;*/
+    stroke: #a5967e;
     stroke-linejoin: round;
     stroke-linecap: round;
     vector-effect: non-scaling-stroke;
 }
 
-.overlay {
+/*.overlay {
     fill: none;
     pointer-events: all;
-}
+}*/

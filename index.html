@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="document" style="width: 960px" ;>
+    <div id="document" style="width: 920px" ;>
         <div id="Title">
             <h1>Tracking Sea Turtles</h1>
             <div id="selection"></div>
@@ -93,26 +93,26 @@
             .attr("height", height)
             .call(zoom);
 
-        //
-        // // ------------Add for graticule  --------------------------
-        //             svg.append("defs").append("path")
-        //                 .datum({type: "Sphere"})
-        //                 .attr("id", "sphere")
-        //                 .attr("d", geoPath);
-        //
-        //             svg.append("use")
-        //                 .attr("class", "stroke")
-        //                 .attr("xlink:href", "#sphere");
-        //
-        //             svg.append("use")
-        //                 .attr("class", "fill")
-        //                 .attr("xlink:href", "#sphere");
-        //
-        //             svg.append("path")
-        //                 .datum(graticule)
-        //                 .attr("class", "graticule")
-        //                 .attr("d", geoPath);
-        // // ------------End additions  for graticule  --------------------------
+
+        // ------------Add for graticule  --------------------------
+
+        svg.append("path")
+            .datum(graticule.outline)
+            .attr("class", "background")
+            .attr("d", geoPath);
+
+        svg.append("g")
+            .attr("class", "graticule")
+          .selectAll("path")
+            .data(graticule.lines)
+          .enter().append("path")
+            .attr("d", geoPath);
+
+        svg.append("path")
+            .datum(graticule.outline)
+            .attr("class", "foreground")
+            .attr("d", geoPath);
+        // ------------End additions  for graticule  --------------------------
 
         var g = svg.append("g");
 
@@ -127,7 +127,8 @@
             g.append("path")
                 .datum(topojson.feature(topology, topology.objects.countries))
                 .attr("d", geoPath)
-                .attr("class", "topology");
+               //  .attr("class", "topology");
+                .attr("class", "land");
 
             var dataYr = [], //array to hold years
                 dataName = [],
