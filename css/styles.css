@@ -78,6 +78,12 @@ h3 {
 rect {
      stroke-width: 2;
 }
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
 
 .footer {
   position: bottom;
@@ -131,13 +137,13 @@ svg {
   background: #bbd0f7;
 }
 
-/*.sphere {
+.sphere {
     fill: #fff;
 }
 
 .land {
      fill: gray;
-}*/
+}
 
 .boundary {
     fill: none;
