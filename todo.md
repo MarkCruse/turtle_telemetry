@@ -4,18 +4,23 @@
 - [x] color legend
 - [x] display legend
 - [x] color points w/legend color
-- [ ] size points w/zoom  
-- [ ] stroke lines are a bit large on zoom
 - [x] repair tooltip - it's broken
 - [x] post live on github.io
 - [x] error when map is clicked - why?
 - [x] dropdown selector or list selector
-- [ ] selector filter data
-- [ ] reset button
+- [x] selector filter data
+- [x] reset button
 - [ ] figure out video software
+- [ ] size points w/zoom  
+- [ ] stroke lines are a bit large on zoom
+- [ ] debug slider not resetting to min value
+- [ ] display min and max values to the slider
 ---
 **Wishlist**
-* sphere to scroll continuous on map http://bl.ocks.org/hollasch/12e6627b4a8d7c3ceaac5297fa1d3169\
+* zoom to points in dataset (mapbounds)
+* sphere to scroll continuous on map
+ http://bl.ocks.org/hollasch/12e6627b4a8d7c3ceaac5297fa1d3169\
+* add data table at bottom
 * a count showing parsing progress
 * add code to parse date and remove 2 columns of data from csv
 
