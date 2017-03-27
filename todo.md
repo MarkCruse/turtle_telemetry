@@ -10,11 +10,14 @@
 - [x] dropdown selector or list selector
 - [x] selector filter data
 - [x] reset button
-- [ ] figure out video software
-- [ ] size points w/zoom  
-- [ ] stroke lines are a bit large on zoom
+- [x] figure out video software
+- [x] correct issue of being able to zoom out too far
+- [ ] block text at bottom
 - [ ] debug slider not resetting to min value
 - [ ] display min and max values to the slider
+- [ ] size points w/zoom  
+- [ ] stroke lines are a bit large on zoom
+- [ ]
 ---
 **Wishlist**
 * zoom to points in dataset (mapbounds)
