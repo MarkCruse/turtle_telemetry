@@ -118,7 +118,7 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
-.select-line {
+/*.select-line {
      width: 820px;
      height: 40px;
      margin-top: 10px;
@@ -126,8 +126,16 @@ div.tooltip {
      margin-bottom: 0px;
      border: 1px, solid #d3d3d3;
      background: #e7ddcd;
+}*/
+.selector {
+     width: 300px;
+     height: 20px;
+     margin-top: 10px;
+     margin-left: 5px;
+     margin-bottom: 0px;
+     border: 1px, solid #d3d3d3;
+     background: #e7ddcd;
 }
-
 
 .slider {
      width: 200px;
@@ -145,24 +153,6 @@ div.tooltip {
      font-size: 12px;
      text-align: center;
 }
-.selector {
-     width: 300px;
-     height: 20px;
-     margin-top: 10px;
-     margin-left: 5px;
-     margin-bottom: 0px;
-     border: 1px, solid #d3d3d3;
-     background: #e7ddcd;
-}
-
-/*#selector, #slider, #year-value
-{
-    display:inline-block;
-}*/
-/*svg {
-  background: #bbd0f7;
-}*/
-
 
 .land {
      opacity: .7;
