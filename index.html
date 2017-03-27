@@ -18,8 +18,7 @@
             <div id="year-value"></div>
             <div class="footer">
                 <p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
-                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/>
-</p>
+                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p>
                 </br/> Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
                 <sub>Created: March 2017<br/>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot' target=" _blank "">The State of the World's Sea Turtles</a>
          <!-- <br/>Last update: 3-26-2017 1330</sub> -->
@@ -75,8 +74,11 @@
         //        .rotate([-180, 0]); //rotation for Pacific
 
 
-        var projection = d3.geo.eckert4()
-            .scale(175)
+        var projection = d3.geoMercator()
+            .scale(145)
+
+          // var projection = d3.geo.eckert4()
+          //      .scale(175)
             .translate([width / 2, height / 2])
             .precision(.1);
 
@@ -263,7 +265,7 @@
             // load the provider_name into the dropdown
             var options = selector.selectAll('option').data(currentProvider).enter().append('option').text(function(d) {
                 return d;
-            });
+           });
 
             function onchangeSelector(newSelection) {
                 currentProvider = newSelection; //THIS must stay!!
@@ -321,7 +323,7 @@
                 .style("fill", function(d, i) {
                     return turtle_name(d);
                 })
-                .style("opacity", 0.8);
+                .style("opacity", 0.7);
 
             legend.append("text")
                 .attr("x", width - 80) //location of legend text on map
