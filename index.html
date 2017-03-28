@@ -40,9 +40,7 @@
         var width = 912,
             height = 460;
 
-        radius = d3.scale.sqrt()
-           .domain([1,1])
-           .range([2,30]);
+        radius = 1.5;
 
        var zoom = d3.behavior.zoom()
          // only scale up, e.g. between 1x and 50x
@@ -63,10 +61,13 @@
            // correct translation and scale (in reverse order)
            g.attr("transform", ["translate(" + [tx, ty] + ")","scale(" + e.scale + ")"]
                .join(" "));
-                 radius.range([2/d3.event.scale, 30/d3.event.scale]);
-               //   console.log(radius.range);
-               //   track
-               //      .attr('d',path.pointRadius)
+               if (d3.event.scale < 2){
+                    radius = (1/(d3.event.scale/1.75))};
+                    if (d3.event.scale > 2){
+                         radius = (1/d3.event.scale)*3};
+                         //   console.log('scale= '+d3.event.scale+' Radius= '+radius);
+                 updateRadius(radius);
+
          });
 
         var tooltip = d3.select('#map').append('div')
@@ -135,7 +136,7 @@
 
         queue()
             .defer(d3.json, "data/world-110m2.json")
-            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_2010-2016.csv")
+            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2016.csv")
             .await(makeMap); //sends error and the next item in function
 
 
@@ -163,7 +164,7 @@
                 return self.indexOf(value) === index;
             }
             var uniqueName = dataName.filter(onlyUnique); //contains no dups(unique) of the turtle common name
-            uniqueName.sort(); //sort the unique name to alphabetise
+            var uniqueNameSort = uniqueName.sort(); //sort the unique name to alphabetise
             var topOfSelection = "Select a data provider (Reset map)";
             var uniqueProvider = dataProvider.filter(onlyUnique); //contains no dups(unique) of the data providers
             uniqueProvider.sort(); //sort the unique name to alphabetise
@@ -172,8 +173,11 @@
             var currentProvider = selectorOptions;
 
             //Set legend color and points
-            var colors = ["coral", "yellow", "red", "green", "purple", "fuchsia"];
-            var legend_labels = [uniqueName[5], uniqueName[4], uniqueName[3], uniqueName[2], uniqueName[1], uniqueName[0]];
+            var colors = ["coral", "yellow", "fuchsia", "red", "green", "purple", "navy"];
+            var legend_labels = [];
+            for (i=uniqueName.length-1; i >=0 ; i--){  //orders the legend label alpha top to bottom
+                 legend_labels.push(uniqueName[i]);
+            }
 
             var turtle_name = d3.scale //set colors for the unique        fturtle names represented in the data
                 .category20()
@@ -192,7 +196,7 @@
                 .data(csvData)
                 .enter()
                 .append("circle")
-                .attr("r", 1) // hardcoded radius
+                .attr("r", radius)
 
                 .attr("fill", function(d) {
                     for (i = 0; i <= uniqueName.length; i++) {
@@ -360,8 +364,11 @@
                 });
             // ----------------  E N D   L E G E N D  -------------------
 
-            updateYr(2010, 2010, currentProvider); //auto set the max slider value to this year;
+            updateYr(1997, 2016, currentProvider); //auto set the max slider value to this year;
 
+           updateRadius = function(pointRadius){
+                track.attr('r',pointRadius);
+           };
 
         }; // end function makeMap
     </script>

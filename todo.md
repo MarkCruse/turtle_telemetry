@@ -13,12 +13,12 @@
 - [x] figure out video software
 - [x] correct issue of being able to zoom out too far
 - [x] block text at bottom
-- [ ] make tooltip useful
+- [x] make tooltip useful
 - [ ] debug slider not resetting to min value
 - [ ] display min and max values to the slider
 - [ ] size points w/zoom  
 - [x] stroke lines are a bit large on zoom
-- [ ]
+- [ ] correct tooltip when near #map frame
 ---
 **Wishlist**
 * zoom to points in dataset (mapbounds)
