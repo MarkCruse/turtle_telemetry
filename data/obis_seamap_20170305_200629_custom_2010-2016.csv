@@ -6069,297 +6069,297 @@ oid,dataset_id,provider_name,Species,common_name,lat,lon,date,year
 10962588,1014,IFREMER and Kelonia,Caretta caretta,Loggerhead,-41.1,36.10,5/25/2012,2012
 10962589,1014,IFREMER and Kelonia,Caretta caretta,Loggerhead,-41.1,36.20,5/25/2012,2012
 10962590,1014,IFREMER and Kelonia,Caretta caretta,Loggerhead,-41.1,36.20,5/25/2012,2012
-12080860,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,24.69,-78,9/3/2010,2010
-12080861,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,24.89,-77.7,9/3/2010,2010
-12080862,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,24.89,-77.9,9/3/2010,2010
-12080863,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-73.5,8/16/2010,2010
-12080864,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-73.5,8/16/2010,2010
-12080865,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.39,-73.5,8/16/2010,2010
-12080866,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29,-73.5,8/14/2010,2010
-12080867,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.89,-73.5,8/14/2010,2010
-12080868,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29,-73.5,8/14/2010,2010
-12080869,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28,-74.4,8/18/2010,2010
-12080870,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.10,-74.5,8/18/2010,2010
-12080871,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.10,-74.5,8/18/2010,2010
-12080872,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-71.7,8/6/2010,2010
-12080873,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.4,8/8/2010,2010
-12080874,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.5,8/8/2010,2010
-12080875,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.4,8/8/2010,2010
-12080876,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-72.5,8/10/2010,2010
-12080877,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29,-72.5,8/10/2010,2010
-12080878,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29,-72.7,8/10/2010,2010
-12080879,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-72.9,8/12/2010,2010
-12080880,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.5,8/8/2010,2010
-12080881,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.2,8/8/2010,2010
-12080882,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.4,8/8/2010,2010
-12080883,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-73.0,8/12/2010,2010
-12080884,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-73.2,8/12/2010,2010
-12080885,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.30,-73.0,8/12/2010,2010
-12080886,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-76.9,8/30/2010,2010
-12080887,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-76.9,8/30/2010,2010
-12080888,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-76.9,8/30/2010,2010
-12080889,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.69,-76.7,8/28/2010,2010
-12080890,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.80,-76.7,8/28/2010,2010
-12080891,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.89,-76.5,8/28/2010,2010
-12080892,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-77.5,9/1/2010,2010
-12080893,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-77.4,9/1/2010,2010
-12080894,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25,-77.5,9/1/2010,2010
-12080895,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-78.5,9/7/2010,2010
-12080896,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.19,-78.2,9/5/2010,2010
-12080897,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78,9/5/2010,2010
-12080898,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78.4,9/7/2010,2010
-12080899,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78.4,9/7/2010,2010
-12080900,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
-12080901,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
-12080902,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
-12080903,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.19,-75.9,8/26/2010,2010
-12080904,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.30,-75.9,8/26/2010,2010
-12080905,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
-12080906,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
-12080907,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
-12080908,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27,-76,8/24/2010,2010
-12080910,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76,8/24/2010,2010
-12080911,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76,8/24/2010,2010
-12080912,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.7,8/22/2010,2010
-12080913,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.7,8/22/2010,2010
-12080914,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.5,8/22/2010,2010
-12080915,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76.0,8/24/2010,2010
-12080917,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
-12080918,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
-12080919,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
-12080920,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-79.9,1/17/2011,2011
-12080932,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-80.2,9/15/2010,2010
-12080934,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-81.5,1/5/2011,2011
-12080936,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-81.9,1/3/2011,2011
-12080943,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-81.7,12/28/2010,2010
-12080944,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-82,12/30/2010,2010
-12080945,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-81.7,12/24/2010,2010
-12080947,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-81.9,9/25/2010,2010
-12080948,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-81.4,1/15/2011,2011
-12080949,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.69,-81.5,1/17/2011,2011
-12080961,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-82.0,9/25/2010,2010
-12080981,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.80,-81.9,10/23/2010,2010
-12080988,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-82.4,12/10/2010,2010
-12080989,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,26.69,-82.0,11/22/2010,2010
-12081337,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-80.2,9/11/2010,2010
-12081338,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-80.2,9/13/2010,2010
-12081403,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,28.5,-80.5,9/10/2010,2010
-12081417,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29,-80.2,9/7/2010,2010
-12081425,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-80.4,9/7/2010,2010
-12081427,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-80.2,9/6/2010,2010
-12081430,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-80.4,9/6/2010,2010
-12081431,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-80.4,9/6/2010,2010
-12081459,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-80.7,9/5/2010,2010
-12081462,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.60,-80.5,9/5/2010,2010
-12081466,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-80.7,9/4/2010,2010
-12081467,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-80.7,9/3/2010,2010
-12081484,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-68.9,7/27/2010,2010
-12081485,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-68.7,7/27/2010,2010
-12081486,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-68.9,7/27/2010,2010
-12081487,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-69.5,7/29/2010,2010
-12081488,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-69.5,7/29/2010,2010
-12081489,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-69.5,7/29/2010,2010
-12081490,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-69.5,7/29/2010,2010
-12081491,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-69,7/27/2010,2010
-12081492,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-68.4,7/25/2010,2010
-12081493,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.5,-68.4,7/25/2010,2010
-12081494,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.60,-68.4,7/25/2010,2010
-12081495,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-67.7,7/23/2010,2010
-12081496,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-67.7,7/23/2010,2010
-12081497,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-67.5,7/23/2010,2010
-12081500,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.5,7/13/2010,2010
-12081501,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.5,7/13/2010,2010
-12081502,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.7,7/13/2010,2010
-12081503,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.89,-64.5,7/13/2010,2010
-12081504,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-64,7/15/2010,2010
-12081506,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.20,-64.0,7/15/2010,2010
-12081507,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-64,7/15/2010,2010
-12081508,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.2,7/17/2010,2010
-12081509,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.4,7/17/2010,2010
-12081510,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.5,7/17/2010,2010
-12081511,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.5,7/17/2010,2010
-12081512,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.4,7/17/2010,2010
-12081513,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-67,7/21/2010,2010
-12081514,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-66.9,7/21/2010,2010
-12081515,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-66.9,7/21/2010,2010
-12081516,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-66.7,7/21/2010,2010
-12081517,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.20,-67,7/21/2010,2010
-12081518,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.29,-67,7/21/2010,2010
-12081519,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-65.5,7/11/2010,2010
-12081520,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-65.4,7/11/2010,2010
-12081521,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.70,-65.2,7/11/2010,2010
-12081522,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-66.9,7/9/2010,2010
-12081526,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
-12081527,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
-12081528,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
-12081529,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.4,7/9/2010,2010
-12081530,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
-12081531,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
-12081532,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
-12081533,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.4,7/7/2010,2010
-12081534,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.7,7/5/2010,2010
-12081537,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.60,-65.7,7/19/2010,2010
-12081538,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69,7/25/2010,2010
-12081539,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.9,7/5/2010,2010
-12081540,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-69.7,7/23/2010,2010
-12081541,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.60,-69.7,7/23/2010,2010
-12081542,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.5,-71.4,8/4/2010,2010
-12081543,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.5,8/2/2010,2010
-12081544,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.4,8/2/2010,2010
-12081545,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.5,8/2/2010,2010
-12081546,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-70.7,7/31/2010,2010
-12081547,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-70.7,7/31/2010,2010
-12081548,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-70.5,7/31/2010,2010
-12081549,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-70.5,7/31/2010,2010
-12081550,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-70.5,7/31/2010,2010
-12081551,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.60,-72.4,8/6/2010,2010
-12081552,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-72.2,8/6/2010,2010
-12081553,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-72.2,8/6/2010,2010
-12081554,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-73.0,8/8/2010,2010
-12081555,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-74.2,8/10/2010,2010
-12081556,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.89,-71.5,8/4/2010,2010
-12081557,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.69,-75.5,8/12/2010,2010
-12081558,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.19,-79.9,8/31/2010,2010
-12081560,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.19,-79.9,8/31/2010,2010
-12081562,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.30,-79.9,8/30/2010,2010
-12081563,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-79.9,8/30/2010,2010
-12081564,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-79.9,8/30/2010,2010
-12081565,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.5,8/28/2010,2010
-12081566,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-79.7,8/30/2010,2010
-12081580,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.89,-79.5,8/29/2010,2010
-12081581,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.89,-79.7,8/29/2010,2010
-12081588,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.7,8/28/2010,2010
-12081589,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.7,8/28/2010,2010
-12081590,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.60,-78.7,8/26/2010,2010
-12081593,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.70,-78.9,8/2/2010,2010
-12081615,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-78.7,8/2/2010,2010
-12081671,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-78.5,8/25/2010,2010
-12081688,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-79.2,8/26/2010,2010
-12081689,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-79.2,8/28/2010,2010
-12081691,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-79.2,8/27/2010,2010
-12081692,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-79.2,8/27/2010,2010
-12081694,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.39,-79.0,8/26/2010,2010
-12081696,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79,8/27/2010,2010
-12081698,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79.0,8/27/2010,2010
-12081699,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79.4,9/2/2010,2010
-12081758,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-79.9,8/10/2010,2010
-12081901,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-76.4,8/24/2010,2010
-12081902,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-76.4,8/24/2010,2010
-12081903,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-76.7,8/24/2010,2010
-12081904,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.5,-76.2,8/24/2010,2010
-12081909,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.89,-76.7,8/7/2013,2013
-12082173,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.5,7/31/2010,2010
-12082174,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.5,7/31/2010,2010
-12082175,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.9,8/1/2010,2010
-12082177,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-78.5,7/30/2010,2010
-12082178,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.20,-78.5,7/31/2010,2010
-12082179,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-78.5,7/30/2010,2010
-12082189,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-78.0,7/28/2010,2010
-12082191,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,33.89,-78,7/23/2010,2010
-12082225,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-76.4,8/9/2013,2013
-12082246,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34,-76.7,8/12/2013,2013
-12082328,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.79,-76.7,7/9/2010,2010
-12082340,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-77.4,7/16/2010,2010
-12082461,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-77.9,7/24/2010,2010
-12082479,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-77.7,7/24/2010,2010
-12082507,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-77.7,7/24/2010,2010
-12082534,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.39,-77.5,7/19/2013,2013
-12082566,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-78.0,7/11/2010,2010
-12082567,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34,-78.0,7/25/2010,2010
-12082568,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-78.0,7/24/2010,2010
-12082569,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.4,6/30/2010,2010
-12082570,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.4,6/30/2010,2010
-12082571,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.2,6/30/2010,2010
-12082572,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36,-72.5,7/3/2010,2010
-12082573,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.70,-72.7,6/30/2010,2010
-12082574,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73,6/30/2010,2010
-12082580,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.9,6/30/2010,2010
-12082581,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.5,6/30/2010,2010
-12082582,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.7,6/30/2010,2010
-12082583,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.7,6/30/2010,2010
-12082584,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.9,6/30/2010,2010
-12082585,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73.2,6/30/2010,2010
-12082586,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73,6/30/2010,2010
-12082587,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73.2,6/30/2010,2010
-12082588,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.70,-73.4,7/3/2010,2010
-12082589,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.5,6/30/2010,2010
-12082591,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-74.2,6/30/2010,2010
-12082592,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,35.29,-74.7,6/29/2010,2010
-12082600,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-70.9,8/2/2010,2010
-12082601,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-71,7/31/2010,2010
-12082602,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-70.9,7/1/2010,2010
-12082603,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.89,-70.7,7/1/2010,2010
-12082604,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-71.2,7/1/2010,2010
-12082605,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-71.4,7/1/2010,2010
-12082606,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-71.2,7/1/2010,2010
-12082607,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.29,-71.5,7/1/2010,2010
-12082608,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-71.7,7/1/2010,2010
-12082609,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.29,-71.5,7/1/2010,2010
-12082610,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-71.0,7/1/2010,2010
-12082611,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.70,-71,7/1/2010,2010
-12082612,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-72,7/1/2010,2010
-12082613,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37,-70.5,7/2/2010,2010
-12082614,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.10,-70.4,7/2/2010,2010
-12082616,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-70.2,7/2/2010,2010
-12082617,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.5,-70.2,7/2/2010,2010
-12082620,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.70,-70.0,7/2/2010,2010
-12082621,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.79,-70.2,7/2/2010,2010
-12082622,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,37.89,-70.0,7/2/2010,2010
-12082625,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.2,7/6/2010,2010
-12082630,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-70.0,7/3/2010,2010
-12082631,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-70.0,7/3/2010,2010
-12082633,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.0,7/3/2010,2010
-12082634,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.2,7/3/2010,2010
-12082635,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.2,7/3/2010,2010
-12082636,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.2,7/3/2010,2010
-12082639,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
-12082640,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
-12082642,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.7,7/4/2010,2010
-12082643,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.9,7/4/2010,2010
-12082644,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
-12082646,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-71.4,7/5/2010,2010
-12082649,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-71.2,7/5/2010,2010
-12082650,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-71.2,7/5/2010,2010
-12082651,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
-12082652,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
-12082653,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
-12082655,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.5,7/5/2010,2010
-12082657,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-72,7/5/2010,2010
-12082658,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.0,7/6/2010,2010
-12082660,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.4,7/6/2010,2010
-12082663,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.7,7/6/2010,2010
-12082665,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.7,7/6/2010,2010
-12082666,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-73,7/7/2010,2010
-12082667,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38,-73.0,7/7/2010,2010
-12082668,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.2,7/7/2010,2010
-12082670,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.4,7/7/2010,2010
-12082671,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.4,7/7/2010,2010
-12082672,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.5,7/7/2010,2010
-12082673,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.5,7/7/2010,2010
-12082674,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.7,7/8/2010,2010
-12082675,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.7,7/8/2010,2010
-12082676,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.9,7/8/2010,2010
-12082679,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74,7/8/2010,2010
-12082680,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74.0,7/8/2010,2010
-12082688,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74.7,7/9/2010,2010
-12082871,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.19,-80.4,9/4/2010,2010
-12082872,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.19,-80.4,9/3/2010,2010
-12082874,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.39,-80.2,9/3/2010,2010
-12082875,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.30,-80.5,9/3/2010,2010
-12082876,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.5,-80.2,9/3/2010,2010
-12082877,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.69,-80.2,9/2/2010,2010
-12082879,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.5,9/1/2010,2010
-12082880,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.0,9/2/2010,2010
-12082881,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.0,9/2/2010,2010
-12082882,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.2,9/1/2010,2010
-12082883,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.4,9/1/2010,2010
-12082884,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.0,9/2/2010,2010
-12082886,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.5,9/1/2010,2010
-12082929,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31,-80.0,9/1/2010,2010
-12082930,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.10,-80.0,9/1/2010,2010
-12082931,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.10,-80.0,9/1/2010,2010
-12082933,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-80.2,8/30/2010,2010
-12082937,655,Seaturtle.org/NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-80.2,8/30/2010,2010
+12080860,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,24.69,-78,9/3/2010,2010
+12080861,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,24.89,-77.7,9/3/2010,2010
+12080862,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,24.89,-77.9,9/3/2010,2010
+12080863,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-73.5,8/16/2010,2010
+12080864,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-73.5,8/16/2010,2010
+12080865,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.39,-73.5,8/16/2010,2010
+12080866,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29,-73.5,8/14/2010,2010
+12080867,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.89,-73.5,8/14/2010,2010
+12080868,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29,-73.5,8/14/2010,2010
+12080869,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28,-74.4,8/18/2010,2010
+12080870,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.10,-74.5,8/18/2010,2010
+12080871,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.10,-74.5,8/18/2010,2010
+12080872,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-71.7,8/6/2010,2010
+12080873,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.4,8/8/2010,2010
+12080874,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.5,8/8/2010,2010
+12080875,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.4,8/8/2010,2010
+12080876,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-72.5,8/10/2010,2010
+12080877,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29,-72.5,8/10/2010,2010
+12080878,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29,-72.7,8/10/2010,2010
+12080879,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-72.9,8/12/2010,2010
+12080880,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-72.5,8/8/2010,2010
+12080881,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.2,8/8/2010,2010
+12080882,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-72.4,8/8/2010,2010
+12080883,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-73.0,8/12/2010,2010
+12080884,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-73.2,8/12/2010,2010
+12080885,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.30,-73.0,8/12/2010,2010
+12080886,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-76.9,8/30/2010,2010
+12080887,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-76.9,8/30/2010,2010
+12080888,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-76.9,8/30/2010,2010
+12080889,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.69,-76.7,8/28/2010,2010
+12080890,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.80,-76.7,8/28/2010,2010
+12080891,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.89,-76.5,8/28/2010,2010
+12080892,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-77.5,9/1/2010,2010
+12080893,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-77.4,9/1/2010,2010
+12080894,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25,-77.5,9/1/2010,2010
+12080895,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-78.5,9/7/2010,2010
+12080896,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.19,-78.2,9/5/2010,2010
+12080897,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78,9/5/2010,2010
+12080898,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78.4,9/7/2010,2010
+12080899,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-78.4,9/7/2010,2010
+12080900,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
+12080901,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
+12080902,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-79.2,9/9/2010,2010
+12080903,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.19,-75.9,8/26/2010,2010
+12080904,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.30,-75.9,8/26/2010,2010
+12080905,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
+12080906,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
+12080907,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-75.7,8/26/2010,2010
+12080908,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27,-76,8/24/2010,2010
+12080910,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76,8/24/2010,2010
+12080911,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76,8/24/2010,2010
+12080912,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.7,8/22/2010,2010
+12080913,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.7,8/22/2010,2010
+12080914,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.80,-75.5,8/22/2010,2010
+12080915,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,27.10,-76.0,8/24/2010,2010
+12080917,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
+12080918,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
+12080919,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.30,-75.2,8/20/2010,2010
+12080920,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-79.9,1/17/2011,2011
+12080932,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-80.2,9/15/2010,2010
+12080934,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.10,-81.5,1/5/2011,2011
+12080936,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.30,-81.9,1/3/2011,2011
+12080943,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-81.7,12/28/2010,2010
+12080944,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-82,12/30/2010,2010
+12080945,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-81.7,12/24/2010,2010
+12080947,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-81.9,9/25/2010,2010
+12080948,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.5,-81.4,1/15/2011,2011
+12080949,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.69,-81.5,1/17/2011,2011
+12080961,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,25.39,-82.0,9/25/2010,2010
+12080981,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.80,-81.9,10/23/2010,2010
+12080988,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.39,-82.4,12/10/2010,2010
+12080989,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,26.69,-82.0,11/22/2010,2010
+12081337,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-80.2,9/11/2010,2010
+12081338,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.19,-80.2,9/13/2010,2010
+12081403,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,28.5,-80.5,9/10/2010,2010
+12081417,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29,-80.2,9/7/2010,2010
+12081425,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.10,-80.4,9/7/2010,2010
+12081427,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-80.2,9/6/2010,2010
+12081430,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.39,-80.4,9/6/2010,2010
+12081431,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-80.4,9/6/2010,2010
+12081459,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.5,-80.7,9/5/2010,2010
+12081462,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.60,-80.5,9/5/2010,2010
+12081466,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-80.7,9/4/2010,2010
+12081467,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,29.89,-80.7,9/3/2010,2010
+12081484,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-68.9,7/27/2010,2010
+12081485,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-68.7,7/27/2010,2010
+12081486,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-68.9,7/27/2010,2010
+12081487,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-69.5,7/29/2010,2010
+12081488,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-69.5,7/29/2010,2010
+12081489,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-69.5,7/29/2010,2010
+12081490,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-69.5,7/29/2010,2010
+12081491,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-69,7/27/2010,2010
+12081492,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-68.4,7/25/2010,2010
+12081493,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.5,-68.4,7/25/2010,2010
+12081494,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.60,-68.4,7/25/2010,2010
+12081495,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-67.7,7/23/2010,2010
+12081496,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-67.7,7/23/2010,2010
+12081497,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-67.5,7/23/2010,2010
+12081500,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.5,7/13/2010,2010
+12081501,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.5,7/13/2010,2010
+12081502,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-64.7,7/13/2010,2010
+12081503,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.89,-64.5,7/13/2010,2010
+12081504,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-64,7/15/2010,2010
+12081506,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.20,-64.0,7/15/2010,2010
+12081507,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-64,7/15/2010,2010
+12081508,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.2,7/17/2010,2010
+12081509,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.4,7/17/2010,2010
+12081510,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.5,7/17/2010,2010
+12081511,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.5,7/17/2010,2010
+12081512,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.5,-64.4,7/17/2010,2010
+12081513,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-67,7/21/2010,2010
+12081514,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-66.9,7/21/2010,2010
+12081515,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-66.9,7/21/2010,2010
+12081516,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-66.7,7/21/2010,2010
+12081517,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.20,-67,7/21/2010,2010
+12081518,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.29,-67,7/21/2010,2010
+12081519,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-65.5,7/11/2010,2010
+12081520,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-65.4,7/11/2010,2010
+12081521,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.70,-65.2,7/11/2010,2010
+12081522,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-66.9,7/9/2010,2010
+12081526,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
+12081527,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
+12081528,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.2,7/9/2010,2010
+12081529,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-67.4,7/9/2010,2010
+12081530,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
+12081531,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
+12081532,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.2,7/7/2010,2010
+12081533,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.4,7/7/2010,2010
+12081534,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.7,7/5/2010,2010
+12081537,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.60,-65.7,7/19/2010,2010
+12081538,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69,7/25/2010,2010
+12081539,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-69.9,7/5/2010,2010
+12081540,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-69.7,7/23/2010,2010
+12081541,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.60,-69.7,7/23/2010,2010
+12081542,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.5,-71.4,8/4/2010,2010
+12081543,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.5,8/2/2010,2010
+12081544,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.4,8/2/2010,2010
+12081545,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-71.5,8/2/2010,2010
+12081546,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-70.7,7/31/2010,2010
+12081547,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-70.7,7/31/2010,2010
+12081548,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-70.5,7/31/2010,2010
+12081549,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-70.5,7/31/2010,2010
+12081550,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-70.5,7/31/2010,2010
+12081551,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.60,-72.4,8/6/2010,2010
+12081552,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-72.2,8/6/2010,2010
+12081553,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-72.2,8/6/2010,2010
+12081554,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-73.0,8/8/2010,2010
+12081555,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-74.2,8/10/2010,2010
+12081556,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.89,-71.5,8/4/2010,2010
+12081557,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.69,-75.5,8/12/2010,2010
+12081558,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.19,-79.9,8/31/2010,2010
+12081560,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.19,-79.9,8/31/2010,2010
+12081562,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.30,-79.9,8/30/2010,2010
+12081563,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-79.9,8/30/2010,2010
+12081564,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-79.9,8/30/2010,2010
+12081565,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.5,8/28/2010,2010
+12081566,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.60,-79.7,8/30/2010,2010
+12081580,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.89,-79.5,8/29/2010,2010
+12081581,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.89,-79.7,8/29/2010,2010
+12081588,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.7,8/28/2010,2010
+12081589,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32,-79.7,8/28/2010,2010
+12081590,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.60,-78.7,8/26/2010,2010
+12081593,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.70,-78.9,8/2/2010,2010
+12081615,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.79,-78.7,8/2/2010,2010
+12081671,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.89,-78.5,8/25/2010,2010
+12081688,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.10,-79.2,8/26/2010,2010
+12081689,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-79.2,8/28/2010,2010
+12081691,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-79.2,8/27/2010,2010
+12081692,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.29,-79.2,8/27/2010,2010
+12081694,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.39,-79.0,8/26/2010,2010
+12081696,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79,8/27/2010,2010
+12081698,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79.0,8/27/2010,2010
+12081699,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.5,-79.4,9/2/2010,2010
+12081758,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,32.20,-79.9,8/10/2010,2010
+12081901,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-76.4,8/24/2010,2010
+12081902,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.39,-76.4,8/24/2010,2010
+12081903,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-76.7,8/24/2010,2010
+12081904,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.5,-76.2,8/24/2010,2010
+12081909,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.89,-76.7,8/7/2013,2013
+12082173,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.5,7/31/2010,2010
+12082174,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.5,7/31/2010,2010
+12082175,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.10,-78.9,8/1/2010,2010
+12082177,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-78.5,7/30/2010,2010
+12082178,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.20,-78.5,7/31/2010,2010
+12082179,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.29,-78.5,7/30/2010,2010
+12082189,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.79,-78.0,7/28/2010,2010
+12082191,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,33.89,-78,7/23/2010,2010
+12082225,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-76.4,8/9/2013,2013
+12082246,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34,-76.7,8/12/2013,2013
+12082328,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.79,-76.7,7/9/2010,2010
+12082340,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-77.4,7/16/2010,2010
+12082461,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-77.9,7/24/2010,2010
+12082479,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-77.7,7/24/2010,2010
+12082507,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.29,-77.7,7/24/2010,2010
+12082534,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.39,-77.5,7/19/2013,2013
+12082566,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.10,-78.0,7/11/2010,2010
+12082567,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34,-78.0,7/25/2010,2010
+12082568,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,34.20,-78.0,7/24/2010,2010
+12082569,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.4,6/30/2010,2010
+12082570,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.4,6/30/2010,2010
+12082571,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.89,-72.2,6/30/2010,2010
+12082572,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36,-72.5,7/3/2010,2010
+12082573,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.70,-72.7,6/30/2010,2010
+12082574,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73,6/30/2010,2010
+12082580,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.9,6/30/2010,2010
+12082581,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.5,6/30/2010,2010
+12082582,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.7,6/30/2010,2010
+12082583,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.7,6/30/2010,2010
+12082584,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-73.9,6/30/2010,2010
+12082585,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73.2,6/30/2010,2010
+12082586,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73,6/30/2010,2010
+12082587,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.60,-73.2,6/30/2010,2010
+12082588,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.70,-73.4,7/3/2010,2010
+12082589,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.5,-73.5,6/30/2010,2010
+12082591,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.39,-74.2,6/30/2010,2010
+12082592,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,35.29,-74.7,6/29/2010,2010
+12082600,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-70.9,8/2/2010,2010
+12082601,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-71,7/31/2010,2010
+12082602,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.79,-70.9,7/1/2010,2010
+12082603,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.89,-70.7,7/1/2010,2010
+12082604,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-71.2,7/1/2010,2010
+12082605,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.39,-71.4,7/1/2010,2010
+12082606,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.5,-71.2,7/1/2010,2010
+12082607,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.29,-71.5,7/1/2010,2010
+12082608,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-71.7,7/1/2010,2010
+12082609,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.29,-71.5,7/1/2010,2010
+12082610,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.60,-71.0,7/1/2010,2010
+12082611,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.70,-71,7/1/2010,2010
+12082612,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,36.20,-72,7/1/2010,2010
+12082613,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37,-70.5,7/2/2010,2010
+12082614,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.10,-70.4,7/2/2010,2010
+12082616,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.29,-70.2,7/2/2010,2010
+12082617,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.5,-70.2,7/2/2010,2010
+12082620,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.70,-70.0,7/2/2010,2010
+12082621,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.79,-70.2,7/2/2010,2010
+12082622,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,37.89,-70.0,7/2/2010,2010
+12082625,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.2,7/6/2010,2010
+12082630,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-70.0,7/3/2010,2010
+12082631,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-70.0,7/3/2010,2010
+12082633,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.0,7/3/2010,2010
+12082634,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.2,7/3/2010,2010
+12082635,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.2,7/3/2010,2010
+12082636,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.2,7/3/2010,2010
+12082639,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
+12082640,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
+12082642,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.7,7/4/2010,2010
+12082643,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-70.9,7/4/2010,2010
+12082644,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.29,-70.9,7/4/2010,2010
+12082646,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-71.4,7/5/2010,2010
+12082649,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-71.2,7/5/2010,2010
+12082650,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.39,-71.2,7/5/2010,2010
+12082651,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
+12082652,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
+12082653,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.7,7/5/2010,2010
+12082655,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-71.5,7/5/2010,2010
+12082657,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-72,7/5/2010,2010
+12082658,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.0,7/6/2010,2010
+12082660,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.4,7/6/2010,2010
+12082663,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.7,7/6/2010,2010
+12082665,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-72.7,7/6/2010,2010
+12082666,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-73,7/7/2010,2010
+12082667,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38,-73.0,7/7/2010,2010
+12082668,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.2,7/7/2010,2010
+12082670,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.4,7/7/2010,2010
+12082671,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.4,7/7/2010,2010
+12082672,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-73.5,7/7/2010,2010
+12082673,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.5,7/7/2010,2010
+12082674,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.7,7/8/2010,2010
+12082675,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.7,7/8/2010,2010
+12082676,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.20,-73.9,7/8/2010,2010
+12082679,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74,7/8/2010,2010
+12082680,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74.0,7/8/2010,2010
+12082688,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,38.10,-74.7,7/9/2010,2010
+12082871,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.19,-80.4,9/4/2010,2010
+12082872,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.19,-80.4,9/3/2010,2010
+12082874,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.39,-80.2,9/3/2010,2010
+12082875,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.30,-80.5,9/3/2010,2010
+12082876,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.5,-80.2,9/3/2010,2010
+12082877,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.69,-80.2,9/2/2010,2010
+12082879,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.5,9/1/2010,2010
+12082880,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.0,9/2/2010,2010
+12082881,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.0,9/2/2010,2010
+12082882,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.2,9/1/2010,2010
+12082883,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.4,9/1/2010,2010
+12082884,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.89,-80.0,9/2/2010,2010
+12082886,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,30.80,-80.5,9/1/2010,2010
+12082929,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31,-80.0,9/1/2010,2010
+12082930,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.10,-80.0,9/1/2010,2010
+12082931,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.10,-80.0,9/1/2010,2010
+12082933,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.39,-80.2,8/30/2010,2010
+12082937,655,Seaturtle.org NCWRC/DUML,Caretta caretta,Loggerhead,31.5,-80.2,8/30/2010,2010
 13978500,1130,James Cook University and Torres Strait Ranger Groups,Natator depressus,Flatback,-10,137.6,3/31/2014,2014
 13978501,1130,James Cook University and Torres Strait Ranger Groups,Natator depressus,Flatback,-9.90,137.8,3/31/2014,2014
 13978502,1130,James Cook University and Torres Strait Ranger Groups,Natator depressus,Flatback,-9.90,138,3/30/2014,2014

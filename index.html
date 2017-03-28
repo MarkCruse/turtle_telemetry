@@ -64,7 +64,7 @@
            g.attr("transform", ["translate(" + [tx, ty] + ")","scale(" + e.scale + ")"]
                .join(" "));
                  radius.range([2/d3.event.scale, 30/d3.event.scale]);
-                 console.log(radius.range);
+               //   console.log(radius.range);
                //   track
                //      .attr('d',path.pointRadius)
          });
@@ -74,7 +74,6 @@
 
         var projection = d3.geoMercator()
             .scale(145)
-
           // var projection = d3.geo.eckert4()
           //      .scale(175)
             .translate([width / 2, height / 2])
@@ -110,6 +109,27 @@
             .attr("class", "foreground")
             .attr("d", geoPath);
         // ------------End additions  for graticule  --------------------------
+
+       // ------------Begin tooltip setup  --------------------------
+        var tooltip = d3.select('#map')
+          .append('div')
+          .attr('class', 'tooltip');
+
+        tooltip.append('div')
+          .attr('class', 'label');
+
+        tooltip.append('div')
+          .attr('class', 'date');
+
+        tooltip.append('div')
+          .attr('class', 'location');
+
+          tooltip.append('div')
+            .attr('class', 'blankline');
+
+          tooltip.append('div')
+           .attr('class', 'provider');
+       // ------------End tooltip setup  --------------------------
 
         var g = svg.append("g");
 
@@ -198,8 +218,15 @@
 
                 .on('mousemove', function(d) {
                     tooltip.classed('hidden', false)
-                        .attr('style', 'left:' + (d3.event.clientX + 20) + 'px; top:' + (d3.event.clientY - 20) + 'px')
-                        .html(d.common_name + ' ' + d.date + ' ' + d.provider_name);
+                        .attr('style', 'left:' + (d3.event.clientX + 20) + 'px; top:' + (d3.event.clientY - 20) + 'px');
+
+                       tooltip.select('.label').html(d.common_name);
+                       tooltip.select('.date').html(d.date);
+                       tooltip.select('.location').html(d.lat+", "+d.lon);
+                       tooltip.select('.blankline').html("\n");
+                       tooltip.select('.provider').html(d.provider_name);
+                       tooltip.style('display', 'block');
+
                     d3.select(this).attr("class", "hover"); //apply CSS class rules
                 })
 

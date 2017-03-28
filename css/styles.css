@@ -109,8 +109,8 @@ h3 {
 div.tooltip {
     position: absolute;
     text-align: center;
-    width: absolute;
-    height: 15px;
+    width: 120px;
+    height: absolute;
     padding: 2px;
     font-size: 12px;
     background: #f0eae0;
