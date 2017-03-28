@@ -77,6 +77,11 @@
             .scale(145)
           // var projection = d3.geo.eckert4()
           //      .scale(175)
+
+          //   .center([50, 10]) //center on Pacific ocean
+          //   .scale(225) // scale for Pacific
+          //   .rotate([-180, 0]) //rotation for Pacific
+
             .translate([width / 2, height / 2])
             .precision(.1);
 
@@ -135,7 +140,7 @@
         var g = svg.append("g");
 
         queue()
-            .defer(d3.json, "data/world-110m2.json")
+            .defer(d3.json, "data/world-50m.json")
             .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2016.csv")
             .await(makeMap); //sends error and the next item in function
 
@@ -200,7 +205,7 @@
 
                 .attr("fill", function(d) {
                     for (i = 0; i <= uniqueName.length; i++) {
-                        if (d.common_name == uniqueName[i]) { // give each turtle species it's ownn color
+                        if (d.common_name == uniqueName[i]) { // give each turtle species it's own color
                             //    console.log(d.common_name,i, uniqueName[i], colors[i])
                             d.color = colors[i] // add the color to objects
                             return colors[i];
@@ -299,6 +304,7 @@
             function onchangeSelector(newSelection) {
                 currentProvider = newSelection; //THIS must stay!!
                 var tdataYr = [];
+
                 track.attr("display", function(d) {
                     if (currentProvider != d.provider_name) {
                         return "none"
@@ -315,7 +321,7 @@
 
                     slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
                     output.text(Number(min)); // output the selected date to the slider text
-                    updateYr(2010, 2010, currentProvider);
+                    updateYr(1997, 2016, currentProvider);
                 } else {
                     // get the start year and end year range for the selected provider_name
                     var min = Math.min.apply(Math, tdataYr), //get the min year
