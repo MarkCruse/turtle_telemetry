@@ -16,9 +16,10 @@
 - [x] make tooltip useful
 - [ ] debug slider not resetting to min value
 - [ ] display min and max values to the slider
-- [ ] size points w/zoom  
+- [x] size points w/zoom  
 - [x] stroke lines are a bit large on zoom
 - [ ] correct tooltip when near #map frame
+- [ ] when reset is selected zoom out
 ---
 **Wishlist**
 * zoom to points in dataset (mapbounds)
