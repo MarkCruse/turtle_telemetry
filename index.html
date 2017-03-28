@@ -255,7 +255,7 @@
             var slide = d3.select(".slider")
                 .attr("min", min)
                 .attr("max", max)
-                .attr("value", min)
+                .attr("value", max)
                 .attr("step", 1)
                 .on("input", function() {
                     // console.log('Invoked from slider ' + currentProvider +' '+ this.value +' '+  this.value);
@@ -265,8 +265,16 @@
             function updateYr(val1, val2, rcvProvider) {
                 // console.log('Recieving info '+rcvProvider+' '+val1+' '+val2);
                 currentProvider = rcvProvider;
-                output.text(Number(val1)); // output the selected date to the slider text
+                if (val1 == 2017){
+                      output.text(val1 +' - ' + val2); // output the selected date to the slider text
+               }else{
+                   output.text(val1); // output the selected date to the slider text
+               }
+
                 track.attr("display", function(d) { //display only the points with matching year
+                     if (val2 == 2017) {
+                        var output = d3.select("#year-value").text(min + "-" + max);
+                        return "all"};
                     if (val2 > val1) {
                         if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
                             if (d.year < val1 || d.year > val2) {
@@ -319,16 +327,16 @@
                         max = Math.max.apply(Math, dataYr); //get the max year
                     // console.log(currentProvider);
 
-                    slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
-                    output.text(Number(min)); // output the selected date to the slider text
-                    updateYr(1997, 2016, currentProvider);
+                    slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
+                    output.text(Number(max)); // output the selected date to the slider text
+                    updateYr(1997, 2017, currentProvider);
                 } else {
                     // get the start year and end year range for the selected provider_name
                     var min = Math.min.apply(Math, tdataYr), //get the min year
                         max = Math.max.apply(Math, tdataYr); //get the max year
                     // console.log(min + ',' + max);
-                    slide.attr("min", min).attr("max", max).attr("value", min).attr("step", 1);
-                    output.text(Number(min)); // output the selected date to the slider text
+                    slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
+                    output.text(Number(max)); // output the selected date to the slider text
                     // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
                     updateYr(min, max, currentProvider);
 
@@ -379,7 +387,7 @@
         }; // end function makeMap
 
     </script>
-    <script>
+    <script>             //From Google Analytics - page hit tracking
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
