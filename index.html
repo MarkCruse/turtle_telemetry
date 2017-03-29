@@ -193,10 +193,6 @@
             var min = Math.min.apply(Math, dataYr), //get the min year
                 max = Math.max.apply(Math, dataYr); //get the max year
 
-            //   radius = d3.scale.sqrt()
-            //       .domain([min, max])
-            //       .range([2, 30]);
-
             var track = g.selectAll("circle")
                 .data(csvData)
                 .enter()
@@ -265,10 +261,10 @@
             function updateYr(val1, val2, rcvProvider) {
                 // console.log('Recieving info '+rcvProvider+' '+val1+' '+val2);
                 currentProvider = rcvProvider;
-                if (val1 == 2017){
+                if (val2 == 2017){
                       output.text(val1 +' - ' + val2); // output the selected date to the slider text
                }else{
-                   output.text(val1); // output the selected date to the slider text
+                   output.text(val2); // output the selected date to the slider text
                }
 
                 track.attr("display", function(d) { //display only the points with matching year
@@ -328,7 +324,7 @@
                     // console.log(currentProvider);
 
                     slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
-                    output.text(Number(max)); // output the selected date to the slider text
+                    output.text(max); // output the selected date to the slider text
                     updateYr(1997, 2017, currentProvider);
                 } else {
                     // get the start year and end year range for the selected provider_name
@@ -336,7 +332,7 @@
                         max = Math.max.apply(Math, tdataYr); //get the max year
                     // console.log(min + ',' + max);
                     slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
-                    output.text(Number(max)); // output the selected date to the slider text
+                    output.text(max); // output the selected date to the slider text
                     // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
                     updateYr(min, max, currentProvider);
 
