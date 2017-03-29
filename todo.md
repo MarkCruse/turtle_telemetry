@@ -14,7 +14,7 @@
 - [x] correct issue of being able to zoom out too far
 - [x] block text at bottom
 - [x] make tooltip useful
-- [ ] debug slider not resetting to min value
+- [ ] debug slider not resetting to max value on reset
 - [ ] display min and max values to the slider
 - [x] size points w/zoom  
 - [x] stroke lines are a bit large on zoom
@@ -32,6 +32,8 @@
 * if needed spinny thing showing loading
  http://bl.ocks.org/rgdonohue/d249d65397d02f5cf0d6
 * add code to parse date and remove 2 columns of data from csv
+* add leaflet with openstreet example: https://bost.ocks.org/mike/leaflet/
+https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=add%20more%20to%20d3%20maps&oq=add%20more%20to%20d3%20maps&aqs=chrome..69i57.6990j0j7
 
 **Notes**
 Selector based on http://bl.ocks.org/jfreels/6734823
