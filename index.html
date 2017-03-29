@@ -271,7 +271,7 @@
                }else{
                    output.text(val1 +' - ' + val2); // output the selected date to the slider text  ***This is first display
                }
-
+  
                 track.attr("display", function(d) { //display only the points with matching year
                      if (val2 == 2017) {
                         var output = d3.select("#year-value").text(val1+ "-" + max);
