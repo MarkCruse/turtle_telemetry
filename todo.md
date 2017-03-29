@@ -35,3 +35,4 @@
 
 **Notes**
 Selector based on http://bl.ocks.org/jfreels/6734823
+Slider inside map example: http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/
