@@ -75,6 +75,7 @@ h3 {
 }
 
 .rect {
+     background: #f0eae0;
      stroke-width: 5;
      border: 0px solid #d3d3d3;
 }
@@ -128,21 +129,25 @@ div.tooltip {
      background: #e7ddcd;
 }*/
 .selector {
+     position: fixed;
      width: 300px;
-     height: 20px;
+     height: 27px;
      margin-top: 10px;
-     margin-left: 5px;
+     margin-left: 15px;
      margin-bottom: 0px;
      border: 1px, solid #d3d3d3;
      background: #e7ddcd;
+     opacity: .85;
 }
 
 .slider {
-position: fixed;
+     position: fixed;
      width: 200px;
      margin-top: 410px;
      margin-left: 25px;
      margin-bottom: 0px;
+     color: #766951;
+     background: #766951;
      /*border: 1px, solid #d3d3d3;*/
 }
 
@@ -155,8 +160,9 @@ position: fixed;
 
 #year-value {
     position: fixed;
-    top: 520px;
+    top: 485px;
      width: 100px;
+     /*color: #e7ddcd;*/
      font-size: 12px;
      margin-top: 0px;
      margin-left: 75px;

@@ -141,7 +141,7 @@
 
         queue()
             .defer(d3.json, "data/world-50m.json")
-            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2016.csv")
+            .defer(d3.csv, "data/obis_seamap_20170305_200629_custom_1997-2017.csv")
             .await(makeMap); //sends error and the next item in function
 
 
