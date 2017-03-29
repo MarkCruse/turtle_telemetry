@@ -157,12 +157,14 @@
                 dataName = [],
                 dataProvider = [],
                 dataYrProvider = [],
+                dataDate = [],
                 datum;
 
             csvData.forEach(function(csvData) {
                 dataYr.push(csvData.year); //load year to array
                 dataName.push(csvData.common_name);
                 dataProvider.push(csvData.provider_name);
+                dataDate.push(csvData.date_string);
             });
 
             function onlyUnique(value, index, self) { //find only the unique values
@@ -176,6 +178,8 @@
             uniqueProvider.unshift(topOfSelection); //add to the top of the array
             var selectorOptions = uniqueProvider;
             var currentProvider = selectorOptions;
+            var uniquedateString = dataDate.filter(onlyUnique);
+            var dateString = uniquedateString.sort();
 
             //Set legend color and points
             var colors = ["coral", "yellow", "fuchsia", "red", "green", "purple", "navy"];
@@ -192,6 +196,10 @@
             // get the start year and end year range
             var min = Math.min.apply(Math, dataYr), //get the min year
                 max = Math.max.apply(Math, dataYr); //get the max year
+
+             // get the start year-month-day and end year-month-day range
+             var minRange = Math.min.apply(Math, dateString), //get the min year
+                 maxRange = Math.max.apply(Math, dateString); //get the max year
 
             var track = g.selectAll("circle")
                 .data(csvData)
@@ -241,7 +249,7 @@
                     d3.select(this).attr("class", "none");
                 });
             // var output = d3.select("#year-value").text(min + "-" + max);
-            var output = d3.select("#year-value").text(max);
+            var output = d3.select("#year-value").text(min + "-" + max);
 
             // ----------------  B E G I N    S L I D E R   S E L E C T O R -------------------
             var slide = d3.select(".slider")
@@ -251,25 +259,27 @@
                 .attr("step", 1)
                 .on("input", function() {
                     // console.log('Invoked from slider ' + currentProvider +' '+ this.value +' '+  this.value);
-                    updateYr(this.value, this.value, currentProvider);
+                    updateYr(min, this.value, currentProvider);
                 });
 
             function updateYr(val1, val2, rcvProvider) {
                 // console.log('Recieving info '+rcvProvider+' '+val1+' '+val2);
+                min=val1;
                 currentProvider = rcvProvider;
                 if (val2 == 2017){
-                      output.text(val1 +' - ' + val2); // output the selected date to the slider text
+                      output.text(val1+' - ' + val2); // output the selected date to the slider text
                }else{
-                   output.text(val2); // output the selected date to the slider text
+                   output.text(val1 +' - ' + val2); // output the selected date to the slider text  ***This is first display
                }
 
                 track.attr("display", function(d) { //display only the points with matching year
                      if (val2 == 2017) {
-                        var output = d3.select("#year-value").text(min + "-" + max);
+                        var output = d3.select("#year-value").text(val1+ "-" + max);
                         return "all"};
                     if (val2 > val1) {
                         if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
-                            if (d.year < val1 || d.year > val2) {
+                         //     if (d.year < val1 || d.year > val2) {
+                              if (d.year > val2) {
                                 return "none";
                             };
                         } else {
@@ -280,7 +290,7 @@
                         if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
                             // if (currentProvider == d.provider_name || currentProvider == selectorOptions) {
                             // console.log('Matches ' + currentProvider+' '+d.provider_name+' '+val1+' '+val2+' '+d.provider_name+' '+d.year);
-                            if (d.year != val1) {
+                            if (d.year > val1) {
                                 return "none";
                             };
                         } else {
@@ -317,18 +327,22 @@
                     // console.log('Reset invoked'+' ');
                     var min = Math.min.apply(Math, dataYr), //get the min year
                         max = Math.max.apply(Math, dataYr); //get the max year
+
+                 // get the start year-month-day and end year-month-day range
+                 var minRange = Math.min.apply(Math, dateString), //get the min year
+                     maxRange = Math.max.apply(Math, dateString); //get the max year
                     // console.log(currentProvider);
 
                     slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
-                    output.text(max); // output the selected date to the slider text
-                    updateYr(1997, 2017, currentProvider);
+                    output.text(min+' '+max); // output the selected date to the slider text
+                    updateYr(min, max, currentProvider);
                 } else {
                     // get the start year and end year range for the selected provider_name
                     var min = Math.min.apply(Math, tdataYr), //get the min year
                         max = Math.max.apply(Math, tdataYr); //get the max year
                     // console.log(min + ',' + max);
                     slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
-                    output.text(max); // output the selected date to the slider text
+                    output.text(min+' '+max); // output the selected date to the slider text
                     // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
                     updateYr(min, max, currentProvider);
                 };
@@ -369,7 +383,7 @@
                 });
             // ----------------  E N D   L E G E N D  -------------------
 
-            updateYr(1997, 2017, currentProvider); //auto set the max slider value to this year;
+            updateYr(min, max, currentProvider); //auto set the max slider value to this year;
 
            updateRadius = function(pointRadius){
                 track.attr('r',pointRadius);
