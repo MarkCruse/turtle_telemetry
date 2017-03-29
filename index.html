@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>Turtle Tracking</title>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
@@ -13,9 +12,11 @@
         <div id="Title">
             <div id="maptitle">Tracking Sea Turtles</div>
             <div id="selection"></div>
-            <div id="map"></div>
-            <input type="range" class="slider">
+            <div id="slider">
+            <input id="timeslide" type="range" class="slider"></div>
+            <!-- <span id="year-value"></span></div> -->
             <div id="year-value"></div>
+            <div id="map"></div>
             <div id="text-box" style="width: 920px"><p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
                 sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This web page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p></div>
           <div class="footer" style="width: 900px">Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
@@ -37,7 +38,7 @@
             .style("opacity", 0);
 
         var width = 912,
-            height = 460;
+            height = 440;
 
         radius = 1.5;
 
@@ -65,9 +66,14 @@
                     if (d3.event.scale > 2){
                          radius = (1/d3.event.scale)*3};
                          //   console.log('scale= '+d3.event.scale+' Radius= '+radius);
-                 updateRadius(radius);
+              updateRadius(radius);
 
-         });
+         });   //end zoom
+
+       var svg = d3.select("#map").append("svg")
+           .attr("width", width)
+           .attr("height", height)
+           .call(zoom);
 
         var tooltip = d3.select('#map').append('div')
             .attr('class', 'hidden tooltip');
@@ -89,11 +95,6 @@
             .projection(projection);
 
         var graticule = d3.geo.graticule();
-
-        var svg = d3.select("#map").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .call(zoom);
 
         // ------------Add for graticule  --------------------------
 
@@ -242,11 +243,7 @@
             // var output = d3.select("#year-value").text(min + "-" + max);
             var output = d3.select("#year-value").text(max);
 
-            // updateYr(2010, 2013, currentProvider); //auto set the max slider value to this year;
-            // console.log('**************** I should only appear 1 time');
-
             // ----------------  B E G I N    S L I D E R   S E L E C T O R -------------------
-
             var slide = d3.select(".slider")
                 .attr("min", min)
                 .attr("max", max)
@@ -334,7 +331,6 @@
                     output.text(max); // output the selected date to the slider text
                     // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
                     updateYr(min, max, currentProvider);
-
                 };
 
             } //end function onchangeSelector for dropdown selection
@@ -348,8 +344,8 @@
                 .append("g") //   replace placeholders with g elements
                 .attr("class", "legend"); // and give each g a legend class
 
-            var ls_w = 20, //width of legend
-                ls_h = 15; //height of legend
+            var ls_w = 15, //width of legend color box
+                ls_h = 15; //height of legend color box
 
             legend.append("rect")
                 .attr("x", width - 110) //location of legend on map
@@ -364,9 +360,9 @@
                 .style("opacity", 0.7);
 
             legend.append("text")
-                .attr("x", width - 80) //location of legend text on map
+                .attr("x", width - 90) //location of legend text on map
                 .attr("y", function(d, i) {
-                    return height - (i * ls_h) - ls_h - 4;
+                    return height - (i * ls_h) - ls_h - 2;  //Sets the spacing between each text
                 })
                 .text(function(d, i) {
                     return legend_labels[i];
