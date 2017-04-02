@@ -30,7 +30,12 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
-
+    <!-- The following are local links to the libaries -->
+    <!-- <script src="js-distro/d3-queue/d3-queue.min.js"></script>
+    <script src="js-distro/d3/d3.min.js"></script>
+    <script src="js-distro/topojson_v30/topojson.min.js"></script>
+    <script src="js-distro/d3-geo-projection/d3-geo-projection.min.js"></script>
+ -->
     <script type="text/javascript">
         var div = d3.select("body")
             .append("div")
@@ -172,7 +177,7 @@
             }
             var uniqueName = dataName.filter(onlyUnique); //contains no dups(unique) of the turtle common name
             var uniqueNameSort = uniqueName.sort(); //sort the unique name to alphabetise
-            var topOfSelection = "Select a data provider (Reset map)";
+            var topOfSelection = "Select a single data provider (Reset map)";
             var uniqueProvider = dataProvider.filter(onlyUnique); //contains no dups(unique) of the data providers
             uniqueProvider.sort(); //sort the unique name to alphabetise
             uniqueProvider.unshift(topOfSelection); //add to the top of the array
@@ -266,16 +271,17 @@
                 // console.log('Recieving info '+rcvProvider+' '+val1+' '+val2);
                 min=val1;
                 currentProvider = rcvProvider;
-                if (val2 == 2017){
-                      output.text(val1+' - ' + val2); // output the selected date to the slider text
+                // if (val2 == 2017){
+                  if (val2 == val1){
+                      output.text(val1); // output the selected date to the slider text
                }else{
                    output.text(val1 +' - ' + val2); // output the selected date to the slider text  ***This is first display
                }
-  
+
                 track.attr("display", function(d) { //display only the points with matching year
-                     if (val2 == 2017) {
-                        var output = d3.select("#year-value").text(val1+ "-" + max);
-                        return "all"};
+                    //  if (val2 == val1) {
+                    //     var output = d3.select("#year-value").text(val1+ "-" + max);
+                    //     return "all"};
                     if (val2 > val1) {
                         if (currentProvider == d.provider_name || currentProvider[0] == topOfSelection) {
                          //     if (d.year < val1 || d.year > val2) {
@@ -322,6 +328,7 @@
                         tdataYr.push(d.year); //load year to array
                     };
                 })
+
                 if (currentProvider == topOfSelection) {
                     var currentProvider = selectorOptions;
                     // console.log('Reset invoked'+' ');
@@ -337,6 +344,7 @@
                     output.text(min+' '+max); // output the selected date to the slider text
                     updateYr(min, max, currentProvider);
                 } else {
+
                     // get the start year and end year range for the selected provider_name
                     var min = Math.min.apply(Math, tdataYr), //get the min year
                         max = Math.max.apply(Math, tdataYr); //get the max year
@@ -344,6 +352,7 @@
                     slide.attr("min", min).attr("max", max).attr("value", max).attr("step", 1);
                     output.text(min+' '+max); // output the selected date to the slider text
                     // console.log('Passing provider from inside the onchangeSelector function: ' + currentProvider + ' min: '+min+' max: '+max);
+
                     updateYr(min, max, currentProvider);
                 };
 
