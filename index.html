@@ -11,17 +11,21 @@
     <div id="document" style="width: 980px" ;>
         <div id="Title">
             <div id="maptitle">Tracking Sea Turtles</div>
-            <div id="selection"></div>
+            <div id="text-box" style="width: 920px"><p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
+                sea turtles being tracked by satellites provide insight to marine biolgists and conservationists. This web page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p></div>
+<div id="map">
+            <div id="selection"><div class="inner"></div>
+            <!-- <div id="selection"><div class="inner"><img src="images/qmark.png" height="15" width="15" onclick="info();" />  </div></div> -->
+                      <!-- <div id="info" style="display:none">The data providers are organization or individuals that the data for tracking turtles. <br/>Selecting a provider from the list will limit the viewable points on the map.</br/> -->
+          </div>
+          <div id='spinner' class='spinner'></div>
             <div id="slider">
             <input id="timeslide" type="range" class="slider"></div>
             <!-- <span id="year-value"></span></div> -->
             <div id="year-value"></div>
-            <div id="map"></div>
-            <div id="text-box" style="width: 920px"><p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
-                sea turtles being tracked by satellite provide insight to marine biolgists and conservationists. This web page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p></div>
-          <div class="footer" style="width: 900px">Map designed by:&nbsp;&nbsp;Mark Cruse<br/>
+            </div>
+          <div class="footer" style="width: 900px">Map designed by:&nbsp;&nbsp;<a href="https://markcruse.github.io" target="_blank">Mark Cruse</a><br/>
                 <sub>Created: March 2017<br/>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot" target="_blank">SWOT</a>
-         <!-- <br/>Last update: 3-26-2017 1330</sub> -->
             </div>
         </div>
     </div>
@@ -30,12 +34,14 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="http://fgnass.github.com/spin.js/spin.js"></script>
     <!-- The following are local links to the libaries -->
     <!-- <script src="js-distro/d3-queue/d3-queue.min.js"></script>
     <script src="js-distro/d3/d3.min.js"></script>
     <script src="js-distro/topojson_v30/topojson.min.js"></script>
     <script src="js-distro/d3-geo-projection/d3-geo-projection.min.js"></script>
- -->
+    -->
     <script type="text/javascript">
         var div = d3.select("body")
             .append("div")
@@ -177,7 +183,7 @@
             }
             var uniqueName = dataName.filter(onlyUnique); //contains no dups(unique) of the turtle common name
             var uniqueNameSort = uniqueName.sort(); //sort the unique name to alphabetise
-            var topOfSelection = "Select a single data provider (Reset map)";
+            var topOfSelection = "Select a single data provider";
             var uniqueProvider = dataProvider.filter(onlyUnique); //contains no dups(unique) of the data providers
             uniqueProvider.sort(); //sort the unique name to alphabetise
             uniqueProvider.unshift(topOfSelection); //add to the top of the array
@@ -185,7 +191,6 @@
             var currentProvider = selectorOptions;
             var uniquedateString = dataDate.filter(onlyUnique);
             var dateString = uniquedateString.sort();
-
             //Set legend color and points
             var colors = ["coral", "yellow", "fuchsia", "red", "green", "purple", "navy"];
             var legend_labels = [];
@@ -321,6 +326,14 @@
                 currentProvider = newSelection; //THIS must stay!!
                 var tdataYr = [];
 
+                // Call a function or build center and zoom here
+                // if (currentProvider == 'IFREMER and Kelonia'){
+                //   console.log('trying to reproject!');
+                  // projection
+                  // // .center([-11.9, 48.9]) //IFREMER and Kelonia datset(s)
+                  // // .center([19.9, 39.9]) //IFREMER and Kelonia datset(s)
+                  //   .scale(225);
+                // }
                 track.attr("display", function(d) {
                     if (currentProvider != d.provider_name) {
                         return "none"
@@ -398,10 +411,56 @@
                 track.attr('r',pointRadius);
            };
 
+           spinner.stop(spinner_div); //stop spinner once map is loaded
+
         }; // end function makeMap
 
+        function info(){
+        var currently = document.getElementById('info').getAttribute('style');
+            if (currently != 'display:none')
+                document.getElementById('info').setAttribute('style', 'display:none');
+            else
+                document.getElementById('info').setAttribute('style', 'display:block');
+        };  //end function info
+
+
+
+        var opts = {
+				  lines: 13, // The number of lines to draw
+				  length: 40, // The length of each line
+				  width: 14, // The line thickness
+				  radius: 44, // The radius of the inner circle
+				  color: '#fff', // #rbg or #rrggbb
+				  speed: 0.7, // Rounds per second
+				  trail: 83, // Afterglow percentage
+				  shadow: true // Whether to render a shadow
+				};
+
+				    var spinner = null;
+				    var spinner_div = 0;
+				    $(document).ready(function() {
+				      spinner_div = $('#spinner').get(0);
+				      // $("#button1").on('click', function(e) {
+				        // e.preventDefault();
+				        if(spinner == null) {
+				          spinner = new Spinner(opts).spin(spinner_div);
+				        } else {
+				          spinner.spin(spinner_div);
+				        }
+				      });
+
+              //  ********    Begin   Google Analytics - page hit tracking *******
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-96329350-1', 'auto');
+              ga('send', 'pageview');
+              // ************************** End Google Analytics **************************
     </script>
-    <script>  //  ********    Begin   Google Analytics - page hit tracking *******
+
+    <!-- <script>  //  ********    Begin   Google Analytics - page hit tracking *******
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -409,8 +468,8 @@
 
       ga('create', 'UA-96329350-1', 'auto');
       ga('send', 'pageview');
-//************************** End Google Analytics **************************
-    </script>
+    </script> -->
+    <!-- ************************** End Google Analytics ************************** -->
 
 </body>
 

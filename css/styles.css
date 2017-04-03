@@ -7,8 +7,8 @@
   font-size: 28px;
   font-weight: normal;
   line-height: 100%;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 b {
@@ -59,12 +59,6 @@ h3 {
     /*margin-bottom: 5px auto;*/
     border: 5px solid #d3d3d3;
 }
-
-/*.topology {
-     opacity: .7;
-     fill: #d7c7ad;
-     stroke: #766951;
-}*/
 
 .hover {
     fill: yellow;
@@ -119,15 +113,6 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
-/*.select-line {
-     width: 820px;
-     height: 40px;
-     margin-top: 10px;
-     margin-left: 5px;
-     margin-bottom: 0px;
-     border: 1px, solid #d3d3d3;
-     background: #e7ddcd;
-}*/
 .selector {
      position: fixed;
      width: 300px;
@@ -138,6 +123,24 @@ div.tooltip {
      border: 1px, solid #d3d3d3;
      background: #e7ddcd;
      opacity: .85;
+}
+.inner {
+    /*float: left;*/
+    position: fixed;
+    margin-left: 315px;
+    /*left: 50%;*/
+}
+img {
+    display: block;
+    position: fixed;
+    margin-top: 15px;
+    /*margin-left: -35px;*/
+    /*left: -50%;*/
+}
+.info {
+     position: fixed;
+     margin-top: 10px;
+     margin-left: 15px;
 }
 
 .slider {
@@ -151,16 +154,9 @@ div.tooltip {
      /*border: 1px, solid #d3d3d3;*/
 }
 
-/*#sliderContainer {*/
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*position: fixed;*/
-    /*top: 500px;*/
-/*}*/
-
 #year-value {
     position: fixed;
-    top: 485px;
+    top: 600px;
      width: 100px;
      /*color: #e7ddcd;*/
      font-size: 12px;
@@ -181,11 +177,8 @@ div.tooltip {
      vector-effect: non-scaling-stroke;
 }
 
-/*.boundary {
-    fill: none;
-    stroke: #a5967e
-    stroke-width: .17px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    vector-effect: non-scaling-stroke;
-}*/
+.spinner {
+position: fixed;
+top: 50%;
+left: 50%;
+}
