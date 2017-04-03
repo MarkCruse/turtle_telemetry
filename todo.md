@@ -10,33 +10,22 @@
 - [x] dropdown selector or list selector
 - [x] selector filter data
 - [x] reset button
+- [x] can issues with Retina display be fixed? Seems to be isolated to the dimensions of the map
 - [x] figure out video software
-- [x] correct issue of being able to zoom out too far
-- [x] block text at bottom
-- [x] make tooltip useful
-- [ ] debug slider not resetting to max value on reset
-- [ ] display min and max values to the slider
 - [x] size points w/zoom  
 - [x] stroke lines are a bit large on zoom
-- [ ] correct tooltip when near #map frame
-- [ ] when reset is selected zoom out
-
+- [x] debug slider not resetting to min value
+- [x] display min and max values to the slider
+- [x] add a spinnner to show the map is loading
+- [ ] substance/text to page about map
 ---
 **Wishlist**
 * zoom to points in dataset (mapbounds)
 * sphere to scroll continuous on map
  http://bl.ocks.org/hollasch/12e6627b4a8d7c3ceaac5297fa1d3169
-* zoom buttons http://bl.ocks.org/mgold/bbc451a7b9f902954e7c
+* move javascript to separate file
 * add data table at bottom
-* directional lines http://bl.ocks.org/veltman/fc1af365f62c0121b47fd414bf08a3d7
-* if needed spinny thing showing loading
- http://bl.ocks.org/rgdonohue/d249d65397d02f5cf0d6
 * add code to parse date and remove 2 columns of data from csv
-* add leaflet with openstreet example: https://bost.ocks.org/mike/leaflet/
-https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=add%20more%20to%20d3%20maps&oq=add%20more%20to%20d3%20maps&aqs=chrome..69i57.6990j0j7
 
 **Notes**
 Selector based on http://bl.ocks.org/jfreels/6734823
-Slider inside map example: http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/
-
-https://www.one-tab.com/page/42N15RTVTbq6VCXoMwZ_GA
