@@ -11,20 +11,23 @@
     <div id="document" style="width: 980px" ;>
         <div id="Title">
             <div id="maptitle">Tracking Sea Turtles</div>
-            <div id="text-box" style="width: 920px"><p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements of endangered
-                sea turtles being tracked by satellites provide insight to marine biolgists and conservationists. This web page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p></div>
-<div id="map">
-            <div id="selection"><div class="inner"></div>
-            <!-- <div id="selection"><div class="inner"><img src="images/qmark.png" height="15" width="15" onclick="info();" />  </div></div> -->
-                      <!-- <div id="info" style="display:none">The data providers are organization or individuals that the data for tracking turtles. <br/>Selecting a provider from the list will limit the viewable points on the map.</br/> -->
-          </div>
-          <div id='spinner' class='spinner'></div>
-            <div id="slider">
-            <input id="timeslide" type="range" class="slider"></div>
-            <!-- <span id="year-value"></span></div> -->
-            <div id="year-value"></div>
+            <div id="text-box" style="width: 920px">
+                <p align="justify">Sea turtles have been a fascination of mankind since the early explorers. For more than a half century scientists have seriously studied these reptiles, and the more that is learned the more that is not understood. The migratory movements
+                    of endangered sea turtles being tracked by satellites provide insight to marine biolgists and conservationists. This web page is intended to showcase the many georeferenced datasets that are publicly accessible.<br/></p>
             </div>
-          <div class="footer" style="width: 900px">Map designed by:&nbsp;&nbsp;<a href="https://markcruse.github.io" target="_blank">Mark Cruse</a><br/>
+            <div id="map">
+                <div id="selection">
+                    <div class="inner"></div>
+                    <!-- <div id="selection"><div class="inner"><img src="images/qmark.png" height="15" width="15" onclick="info();" />  </div></div> -->
+                    <!-- <div id="info" style="display:none">The data providers are organization or individuals that the data for tracking turtles. <br/>Selecting a provider from the list will limit the viewable points on the map.</br/> -->
+                </div>
+                <div id='spinner' class='spinner'></div>
+                <div id="slider">
+                    <input id="timeslide" type="range" class="slider"></div>
+                <!-- <span id="year-value"></span></div> -->
+                <div id="year-value"></div>
+            </div>
+            <div class="footer" style="width: 900px">Map designed by:&nbsp;&nbsp;<a href="https://markcruse.github.io" target="_blank">Mark Cruse</a><br/>
                 <sub>Created: March 2017<br/>Data source:&nbsp;&nbsp;<a href="http://seamap.env.duke.edu/swot" target="_blank">SWOT</a>
             </div>
         </div>
@@ -35,7 +38,8 @@
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="http://fgnass.github.com/spin.js/spin.js"></script>
+    <!-- <script src="http://fgnass.github.com/spin.js/spin.js"></script> -->
+    <script src="js/spin.min.js"></script>
     <!-- The following are local links to the libaries -->
     <!-- <script src="js-distro/d3-queue/d3-queue.min.js"></script>
     <script src="js-distro/d3/d3.min.js"></script>
